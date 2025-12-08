@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Portland - Pacific Time Chaandramaanam Panchangam</title>
+  <title>Portland, OR - USA - Pacific Time Chaandramaanam Panchangam</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -11,7 +11,7 @@
       margin: 2rem auto;
       padding: 0 1rem;
       line-height: 1.5;
-      background: #faf7f0;
+      background: #f6f2e9;
     }
 
     /* Header layout */
@@ -24,11 +24,11 @@
 
     /* Elegant Guru Image */
     .header img {
-      width: 180px;  
+      width: 180px;
       height: auto;
-      border: 4px solid #d4af37;       /* Gold border */
-      border-radius: 12px;             /* Rounded corners */
-      box-shadow: 0 0 18px rgba(212, 175, 55, 0.45); /* Golden glow */
+      border: 4px solid #d4af37;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
       background: white;
       padding: 6px;
     }
@@ -44,14 +44,6 @@
       color: #333;
     }
 
-    h2 {
-      margin: 0.2rem 0 0.5rem 0;
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: #444;
-    }
-
-    /* Sanskrit subtitle */
     .sanskrit {
       font-size: 1.15rem;
       margin-top: 0.3rem;
@@ -60,7 +52,7 @@
       font-family: "Noto Sans Devanagari", serif;
     }
 
-    /* Gold divider under header */
+    /* Gold divider */
     .divider {
       height: 3px;
       width: 100%;
@@ -93,11 +85,12 @@
       color: #444;
     }
 
-    .updated-at {
-      text-align: center;
-      margin-top: 1rem;
+    /* Timestamp styling */
+    .current-time-inline {
       font-size: 0.85rem;
       color: #555;
+      margin-bottom: 0.5rem;
+      margin-top: -0.25rem;
     }
 
     /* Footer */
@@ -119,31 +112,36 @@
 
 <body>
 
-  <!-- Header (image + title + Sanskrit subtitle) -->
+  <!-- Header -->
   <div class="header">
     <img src="guru.png" alt="Guru Image" />
 
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
       <h1>Chaandramaanam Panchangam</h1>
-
-      
+      <div class="sanskrit">चन्द्रमान पञ्चाङ्गम्</div>
     </div>
   </div>
 
-  <!-- Gold Line Divider -->
   <div class="divider"></div>
 
-  <div id="status" class="updated-at">Loading panchangam data…</div>
+  <div id="status" class="current-time-inline" style="text-align:center;">
+    Loading panchangam data…
+  </div>
 
-  <!-- Panchanga Sections -->
+  <!-- Tithi Section -->
   <div class="section">
     <h3>Tithi</h3>
+
+    <!-- MOVED TIMESTAMP HERE -->
+    <div id="now-display" class="current-time-inline"></div>
+
     <div><span class="label">Current:</span> <span id="tithi-current" class="value">–</span></div>
     <div class="time-remaining" id="tithi-remaining"></div>
     <div><span class="label">Next:</span> <span id="tithi-next" class="value">–</span></div>
   </div>
 
+  <!-- Nakshatra -->
   <div class="section">
     <h3>Nakshatra</h3>
     <div><span class="label">Current:</span> <span id="nak-current" class="value">–</span></div>
@@ -151,6 +149,7 @@
     <div><span class="label">Next:</span> <span id="nak-next" class="value">–</span></div>
   </div>
 
+  <!-- Yogam -->
   <div class="section">
     <h3>Yogam</h3>
     <div><span class="label">Current:</span> <span id="yoga-current" class="value">–</span></div>
@@ -158,6 +157,7 @@
     <div><span class="label">Next:</span> <span id="yoga-next" class="value">–</span></div>
   </div>
 
+  <!-- Karanam -->
   <div class="section">
     <h3>Karanam</h3>
     <div><span class="label">Current:</span> <span id="karana-current" class="value">–</span></div>
@@ -165,12 +165,11 @@
     <div><span class="label">Next:</span> <span id="karana-next" class="value">–</span></div>
   </div>
 
-  <div class="updated-at" id="now-display"></div>
-
   <!-- Footer -->
   <div class="footer">
-    Respectfully acknowledge for all the Panchangam calculations<br />
-    <strong>Shri Ashok Krishnamoorthy, Portland, OR - USA</strong><br /><br />
+    Acknowledgements<br />
+    <strong>Shri Ashok Krishnamoorthy, Portland, OR - USA</strong>
+    <br /><br />
     Contact:<br />
     <strong>a.krishnamoorthy@comcast.net</strong>
   </div>
