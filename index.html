@@ -57,8 +57,18 @@
       height: 3px;
       width: 100%;
       background: linear-gradient(to right, #d4af37, #f8e9a1, #d4af37);
-      margin: 1rem 0 2rem 0;
+      margin: 1rem 0 1.2rem 0;
       border-radius: 2px;
+    }
+
+    /* ⭐ UPDATED CURRENT TIME STYLE ⭐ */
+    .current-time-top {
+      text-align: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #7a5c15;                 /* deep gold-brown */
+      margin-bottom: 1rem;
+      text-shadow: 0 0 6px rgba(212, 175, 55, 0.35);  /* soft golden glow */
     }
 
     /* Section styling */
@@ -83,14 +93,6 @@
     .time-remaining {
       font-size: 0.95rem;
       color: #444;
-    }
-
-    /* Timestamp styling */
-    .current-time-inline {
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 0.5rem;
-      margin-top: -0.25rem;
     }
 
     /* Footer */
@@ -119,23 +121,17 @@
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
       <h1>Chaandramaanam Panchangam</h1>
-      <div class="sanskrit">चन्द्रमान पञ्चाङ्गम्</div>
-    </div>
+      </div>
   </div>
 
   <div class="divider"></div>
 
-  <div id="status" class="current-time-inline" style="text-align:center;">
-    Loading panchangam data…
-  </div>
+  <!-- ⭐ CURRENT TIME (NOW WITH A BOLD GOLD EMPHASIS) ⭐ -->
+  <div id="now-display" class="current-time-top"></div>
 
-  <!-- Tithi Section -->
+  <!-- Tithi -->
   <div class="section">
     <h3>Tithi</h3>
-
-    <!-- MOVED TIMESTAMP HERE -->
-    <div id="now-display" class="current-time-inline"></div>
-
     <div><span class="label">Current:</span> <span id="tithi-current" class="value">–</span></div>
     <div class="time-remaining" id="tithi-remaining"></div>
     <div><span class="label">Next:</span> <span id="tithi-next" class="value">–</span></div>
@@ -167,7 +163,7 @@
 
   <!-- Footer -->
   <div class="footer">
-    Acknowledgements<br />
+    Respectfully acknowledge for all the Panchangam calculations<br />
     <strong>Shri Ashok Krishnamoorthy, Portland, OR - USA</strong>
     <br /><br />
     Contact:<br />
