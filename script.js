@@ -65,7 +65,7 @@ function formatTimeRemaining(end, now) {
   return `${hours} hours ${minutes} minutes remaining`;
 }
 
-// ---- Parsing the text file into sections ----
+// ---- Parsing helpers ----
 
 // Extract the lines belonging to a section starting with a label like "Thithi details"
 function extractSection(lines, startLabel) {
@@ -99,6 +99,16 @@ function getIntervalsFromSection(sectionLines) {
   return intervals;
 }
 
+// Get a simple "Label : Value" header line (e.g. "Samvatsaram : Vishwaavasu")
+function getHeaderValue(lines, label) {
+  const lowerLabel = label.toLowerCase();
+  const line = lines.find(l => l.trim().toLowerCase().startsWith(lowerLabel));
+  if (!line) return null;
+  const parts = line.split(":");
+  if (parts.length < 2) return null;
+  return parts[1].trim();
+}
+
 // ---- Main ----
 
 async function main() {
@@ -112,6 +122,26 @@ async function main() {
 
     const lines = text.split(/\r?\n/);
 
+    // --- Header info (Samvatsaram, Ayanam, etc.) ---
+    const samvatsaramVal = getHeaderValue(lines, "Samvatsaram");
+    const ayanamVal      = getHeaderValue(lines, "Ayanam");
+    const ruthuVal       = getHeaderValue(lines, "Ruthu");
+    const masamVal       = getHeaderValue(lines, "Masam");
+    const pakshamVal     = getHeaderValue(lines, "Paksham");
+
+    const samEl = document.getElementById("samvatsaram");
+    const ayaEl = document.getElementById("ayanam");
+    const rutEl = document.getElementById("ruthu");
+    const masEl = document.getElementById("masam");
+    const pakEl = document.getElementById("paksham");
+
+    if (samEl) samEl.textContent = samvatsaramVal || "–";
+    if (ayaEl) ayaEl.textContent = ayanamVal || "–";
+    if (rutEl) rutEl.textContent = ruthuVal || "–";
+    if (masEl) masEl.textContent = masamVal || "–";
+    if (pakEl) pakEl.textContent = pakshamVal || "–";
+
+    // --- Interval sections ---
     const tithiSection  = extractSection(lines, "Thithi details");
     const nakSection    = extractSection(lines, "Nakshatram details");
     const yogaSection   = extractSection(lines, "Yogam details");
@@ -123,7 +153,9 @@ async function main() {
     const karanaIntervals = getIntervalsFromSection(karanaSection);
 
     const now = new Date(); // local time (PST/PDT for you in Portland)
-    nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
+    if (nowDisplay) {
+      nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
+    }
 
     // ----- Tithi -----
     const { current: tithiCur, next: tithiNext } = findCurrentAndNext(tithiIntervals, now);
@@ -181,11 +213,15 @@ async function main() {
       document.getElementById("karana-next").textContent = "–";
     }
 
-    statusEl.textContent = "Panchangam loaded from panchangam.txt";
+    if (statusEl) {
+      statusEl.textContent = "Panchangam loaded from panchangam.txt";
+    }
 
   } catch (err) {
     console.error(err);
-    statusEl.textContent = "Error loading panchangam data. Check console.";
+    if (statusEl) {
+      statusEl.textContent = "Error loading panchangam data. Check console.";
+    }
   }
 }
 
