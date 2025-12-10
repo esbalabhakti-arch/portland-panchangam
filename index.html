@@ -67,8 +67,17 @@
       font-size: 1.15rem;
       font-weight: 700;
       color: #7a5c15;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
       text-shadow: 0 0 6px rgba(212, 175, 55, 0.35);
+    }
+
+    /* NEW backend timestamp line */
+    .backend-time-line {
+      text-align: center;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #b00020;     /* red */
+      margin-bottom: 0.4rem;
     }
 
     /* Status line */
@@ -160,15 +169,17 @@
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
       <h1>Chaandramaanam Panchangam</h1>
-      <!-- Optional Sanskrit line; add back if you want -->
       <!-- <div class="sanskrit">चन्द्रमान पञ्चाङ्गम्</div> -->
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- Current time -->
+  <!-- Current time (browser) -->
   <div id="now-display" class="current-time-top"></div>
+
+  <!-- NEW: Backend Panchangam time stamp -->
+  <div id="backend-time" class="backend-time-line"></div>
 
   <!-- Status line (file load message) -->
   <div id="status" class="status-line"></div>
@@ -176,7 +187,7 @@
   <!-- Main two-column content -->
   <div class="content">
 
-    <!-- LEFT: existing dynamic sections -->
+    <!-- LEFT: dynamic sections -->
     <div class="left-column">
       <!-- Tithi -->
       <div class="section">
