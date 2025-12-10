@@ -109,11 +109,24 @@ function getHeaderValue(lines, label) {
   return parts[1].trim();
 }
 
+// Get backend timestamp line: "Date and time created: 2025/12/01 15:15:42"
+function getBackendTimestamp(lines) {
+  const line = lines.find(l =>
+    l.trim().toLowerCase().startsWith("date and time created")
+  );
+  if (!line) return null;
+  const parts = line.split(":");
+  if (parts.length < 2) return null;
+  // Join everything after the first ":" in case there are extra colons
+  return parts.slice(1).join(":").trim();
+}
+
 // ---- Main ----
 
 async function main() {
   const statusEl = document.getElementById("status");
   const nowDisplay = document.getElementById("now-display");
+  const backendDisplay = document.getElementById("backend-time");
 
   try {
     const res = await fetch("panchangam.txt");
@@ -140,6 +153,14 @@ async function main() {
     if (rutEl) rutEl.textContent = ruthuVal || "–";
     if (masEl) masEl.textContent = masamVal || "–";
     if (pakEl) pakEl.textContent = pakshamVal || "–";
+
+    // --- Backend time stamp ---
+    const backendTs = getBackendTimestamp(lines);
+    if (backendDisplay) {
+      backendDisplay.textContent = backendTs
+        ? `(Panchangam back-end time stamp: ${backendTs})`
+        : "";
+    }
 
     // --- Interval sections ---
     const tithiSection  = extractSection(lines, "Thithi details");
