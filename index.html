@@ -71,13 +71,13 @@
       text-shadow: 0 0 6px rgba(212, 175, 55, 0.35);
     }
 
-    /* NEW backend timestamp line */
+    /* Backend timestamp – now displayed above footer */
     .backend-time-line {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.8rem;   /* smaller */
       font-style: italic;
-      color: #b00020;     /* red */
-      margin-bottom: 0.4rem;
+      color: #b00020;      /* red */
+      margin: 0.6rem 0 0.4rem 0;
     }
 
     /* Status line */
@@ -139,7 +139,7 @@
 
     /* Footer */
     .footer {
-      margin-top: 3rem;
+      margin-top: 1.2rem;
       padding-top: 1rem;
       border-top: 1px solid #d4af37;
       text-align: center;
@@ -177,9 +177,6 @@
 
   <!-- Current time (browser) -->
   <div id="now-display" class="current-time-top"></div>
-
-  <!-- NEW: Backend Panchangam time stamp -->
-  <div id="backend-time" class="backend-time-line"></div>
 
   <!-- Status line (file load message) -->
   <div id="status" class="status-line"></div>
@@ -251,6 +248,9 @@
     </div>
 
   </div> <!-- /content -->
+
+  <!-- Backend Panchangam time stamp (now above footer line) -->
+  <div id="backend-time" class="backend-time-line"></div>
 
   <!-- Footer -->
   <div class="footer">
