@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam panchangam 
 
-Date and time created: 2025/12/05 18:57:46
+Date and time created: 2025/12/11 16:13:18
 
 Samvatsaram : Vishwaavasu
 
@@ -37,7 +37,17 @@ Navami: 2025/12/12 01:27 to 2025/12/13 03:08
 
 Dashami: 2025/12/13 03:08 to 2025/12/14 05:20
 
-Next Thithi: Ekadashi
+Ekadashi: 2025/12/14 05:20 to 2025/12/15 07:50
+
+Dwadashi: 2025/12/15 07:50 to 2025/12/16 10:27
+
+Tryodashi: 2025/12/16 10:27 to 2025/12/17 13:03
+
+Chathurdashi: 2025/12/17 13:03 to 2025/12/18 15:29
+
+Amavasya: 2025/12/18 15:29 to 2025/12/19 17:43
+
+Next Thithi: Prathama
 
 
 Nakshatram details: 
@@ -63,7 +73,19 @@ Uttaraphalguni: 2025/12/11 14:23 to 2025/12/12 16:18
 
 Hasta: 2025/12/12 16:18 to 2025/12/13 18:46
 
-Next Nakshatram: Chitra
+Chitra: 2025/12/13 18:46 to 2025/12/14 21:36
+
+Swaathi: 2025/12/14 21:36 to 2025/12/16 00:37
+
+Vishaakha: 2025/12/16 00:37 to 2025/12/17 03:39
+
+Anuradha: 2025/12/17 03:39 to 2025/12/18 06:34
+
+Jyeshtaa: 2025/12/18 06:34 to 2025/12/19 09:19
+
+Mula: 2025/12/19 09:19 to 2025/12/20 11:49
+
+Next Nakshatram: Poorvaashada
 
 
 Yogam details: 
@@ -92,7 +114,19 @@ Aayushmaan: 2025/12/11 21:37 to 2025/12/12 21:42
 
 Sowbhagyaha: 2025/12/12 21:42 to 2025/12/13 22:11
 
-Next Yogam: Shobhanaha
+Shobhanaha: 2025/12/13 22:11 to 2025/12/14 22:56
+
+Athigandaha: 2025/12/14 22:56 to 2025/12/15 23:48
+
+Sukarma: 2025/12/15 23:48 to 2025/12/17 00:42
+
+Dhruthihi: 2025/12/17 00:42 to 2025/12/18 01:31
+
+Shoolaha: 2025/12/18 01:31 to 2025/12/19 02:12
+
+Gandaha: 2025/12/19 02:12 to 2025/12/20 02:43
+
+Next Yogam: Vruddhihi
 
 
 Karanam details: 
@@ -138,7 +172,30 @@ Vanijaha: 2025/12/13 03:08 to 2025/12/13 16:11
 
 Vishtihi/Bhadra: 2025/12/13 16:11 to 2025/12/14 05:20
 
+Bavaha: 2025/12/14 05:20 to 2025/12/14 18:33
+
+Baalavaha: 2025/12/14 18:33 to 2025/12/15 07:50
+
+Kowlavaha: 2025/12/15 07:50 to 2025/12/15 21:08
+
+Taithilaha: 2025/12/15 21:08 to 2025/12/16 10:27
+
+Garaja: 2025/12/16 10:27 to 2025/12/16 23:46
+
+Vanijaha: 2025/12/16 23:46 to 2025/12/17 13:03
+
+Vishtihi/Bhadra: 2025/12/17 13:03 to 2025/12/18 02:17
+
+Shakuni: 2025/12/18 02:17 to 2025/12/18 15:29
+
+Chathushpaath: 2025/12/18 15:29 to 2025/12/19 04:38
+
+Naaga: 2025/12/19 04:38 to 2025/12/19 17:43
+
+Kimstughna: 2025/12/19 17:43 to 2025/12/20 06:44
+
 Next Karanam: Bavaha
 
 Shubham
+
 
