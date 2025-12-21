@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam panchangam 
 
-Date and time created: 2025/12/11 16:13:18
+Date and time created: 2025/12/14 13:36:05
 
 Samvatsaram : Vishwaavasu
 
@@ -9,9 +9,9 @@ Ayanam : Dakshinayanam
 
 Ruthu : Hemantha
 
-Masam : Margasheersha
+Masam : Paushaha
 
-Paksham : Krishna
+Paksham : Shukla
 
 
 Thithi details: 
@@ -47,7 +47,13 @@ Chathurdashi: 2025/12/17 13:03 to 2025/12/18 15:29
 
 Amavasya: 2025/12/18 15:29 to 2025/12/19 17:43
 
-Next Thithi: Prathama
+Prathama: 2025/12/19 17:43 to 2025/12/20 19:41
+
+Dwitheeya: 2025/12/20 19:41 to 2025/12/21 21:22
+
+Trutheeya: 2025/12/21 21:22 to 2025/12/22 22:43
+
+Next Thithi: Chathurthi
 
 
 Nakshatram details: 
@@ -85,7 +91,11 @@ Jyeshtaa: 2025/12/18 06:34 to 2025/12/19 09:19
 
 Mula: 2025/12/19 09:19 to 2025/12/20 11:49
 
-Next Nakshatram: Poorvaashada
+Poorvaashada: 2025/12/20 11:49 to 2025/12/21 14:03
+
+Uttaraashada: 2025/12/21 14:03 to 2025/12/22 16:00
+
+Next Nakshatram: Shravana
 
 
 Yogam details: 
@@ -126,7 +136,14 @@ Shoolaha: 2025/12/18 01:31 to 2025/12/19 02:12
 
 Gandaha: 2025/12/19 02:12 to 2025/12/20 02:43
 
-Next Yogam: Vruddhihi
+Vruddhihi: 2025/12/20 02:43 to 2025/12/21 03:01
+
+Dhruvaha: 2025/12/21 03:01 to 2025/12/22 03:06
+
+Vyaaghaathaha: 2025/12/22 03:06 to 2025/12/23 02:56
+
+Next Yogam: Harshanaha
+
 
 
 Karanam details: 
@@ -194,8 +211,21 @@ Naaga: 2025/12/19 04:38 to 2025/12/19 17:43
 
 Kimstughna: 2025/12/19 17:43 to 2025/12/20 06:44
 
-Next Karanam: Bavaha
+Bavaha: 2025/12/20 06:44 to 2025/12/20 19:41
+
+Baalavaha: 2025/12/20 19:41 to 2025/12/21 08:34
+
+Kowlavaha: 2025/12/21 08:34 to 2025/12/21 21:22
+
+Taithilaha: 2025/12/21 21:22 to 2025/12/22 10:05
+
+Garaja: 2025/12/22 10:05 to 2025/12/22 22:43
+
+Vanijaha: 2025/12/22 22:43 to 2025/12/23 11:15
+
+Next Karanam: Vishtihi/Bhadra
 
 Shubham
+
 
 
