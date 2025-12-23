@@ -18,6 +18,14 @@ function formatDateTime(dt) {
   return `${y}/${m}/${d} ${hh}:${mm}`;
 }
 
+// Format a Date like "YYYY/MM/DD" (local)
+function formatDateYMD(dt) {
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, "0");
+  const d = String(dt.getDate()).padStart(2, "0");
+  return `${y}/${m}/${d}`;
+}
+
 // Parse a single interval line
 // Example: "Prathama: 2025/12/04 15:14 to 2025/12/05 11:26"
 function parseIntervalLine(line) {
@@ -121,6 +129,25 @@ function getBackendTimestamp(lines) {
   return parts.slice(1).join(":").trim();
 }
 
+// Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
+function parseVaasaramMap(sectionLines) {
+  const map = new Map();
+  for (const raw of sectionLines) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith("=")) continue;
+
+    // Example: "2025/12/22: Monday, Indu"
+    const m = line.match(/^(\d{4})\/(\d{2})\/(\d{2})\s*:\s*(.+)$/);
+    if (!m) continue;
+
+    const ymd = `${m[1]}/${m[2]}/${m[3]}`;
+    const val = m[4].trim();
+    map.set(ymd, val);
+  }
+  return map;
+}
+
 // ---- Main ----
 
 async function main() {
@@ -173,9 +200,21 @@ async function main() {
     const yogaIntervals   = getIntervalsFromSection(yogaSection);
     const karanaIntervals = getIntervalsFromSection(karanaSection);
 
-    const now = new Date(); // local time (PST/PDT for you in Portland)
+    const now = new Date(); // local time on the user's device
     if (nowDisplay) {
       nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
+    }
+
+    // ✅ NEW: Vaasaram (match today's local YYYY/MM/DD to Vaasaram section in the file)
+    const vasEl = document.getElementById("vasaram-today");
+    if (vasEl) {
+      // Try both spellings just in case: "Vaasaram details" or "Vasaram details"
+      let vasSection = extractSection(lines, "Vaasaram details");
+      if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
+
+      const vasMap = parseVaasaramMap(vasSection);
+      const todayKey = formatDateYMD(now);
+      vasEl.textContent = vasMap.get(todayKey) || "Not available";
     }
 
     // ----- Tithi -----
