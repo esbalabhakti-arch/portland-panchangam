@@ -147,7 +147,7 @@ function getBackendTimestamp(lines) {
 
 /**
  * Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
- * Expected line format (as in your file):
+ * Expected line format:
  * 2025/12/22: Monday, Indu, Sunrise: 07:49:00, Sunset: 16:31:00
  */
 function parseVaasaramDetailsMap(sectionLines) {
@@ -155,7 +155,6 @@ function parseVaasaramDetailsMap(sectionLines) {
 
   for (const raw0 of sectionLines) {
     let raw = raw0 || "";
-    // Normalize non-breaking spaces
     raw = raw.replace(/\u00A0/g, " ").trim();
     if (!raw) continue;
     if (raw.startsWith("=")) continue;
@@ -166,12 +165,9 @@ function parseVaasaramDetailsMap(sectionLines) {
     const ymd = m[1].trim();
     const rest = m[2].trim();
 
-    // Extract weekday + vasaram + sunrise + sunset
-    // weekday, vasaram, Sunrise: HH:MM:SS, Sunset: HH:MM:SS
     const re = /^([^,]+)\s*,\s*([^,]+)\s*,\s*Sunrise:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*,\s*Sunset:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*$/i;
     const mm = rest.match(re);
     if (!mm) {
-      // If format isn't perfect, still store raw text for vasaram display
       map.set(ymd, { raw: rest });
       continue;
     }
@@ -240,19 +236,18 @@ async function main() {
     const yogaIntervals   = getIntervalsFromSection(yogaSection);
     const karanaIntervals = getIntervalsFromSection(karanaSection);
 
-    const now = new Date(); // local time on user's device
+    const now = new Date();
 
     if (nowDisplay) {
       nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
     }
 
-    // --- Vaasaram + Sunrise/Sunset/Noon (from Vaasaram details) ---
+    // --- Vaasaram + Sunrise/Sunset/Noon ---
     const vasEl = document.getElementById("vasaram-today");
     const sunriseEl = document.getElementById("sunrise-time");
     const sunsetEl = document.getElementById("sunset-time");
     const noonEl = document.getElementById("noon-time");
 
-    // Try both spellings just in case
     let vasSection = extractSection(lines, "Vaasaram details");
     if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
 
@@ -266,17 +261,14 @@ async function main() {
       if (sunsetEl) sunsetEl.textContent = "–";
       if (noonEl) noonEl.textContent = "–";
     } else {
-      // Vaasaram display
       if (vasEl) {
         if (todayObj.weekday && todayObj.vasaram) {
           vasEl.textContent = `${todayObj.weekday}, ${todayObj.vasaram}`;
         } else {
-          // fallback to raw if parsing failed
           vasEl.textContent = todayObj.raw || "Not available";
         }
       }
 
-      // Sunrise/Sunset/Noon display (only if parsed)
       if (todayObj.sunrise && todayObj.sunset) {
         if (sunriseEl) sunriseEl.textContent = todayObj.sunrise;
         if (sunsetEl) sunsetEl.textContent = todayObj.sunset;
