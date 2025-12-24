@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam panchangam 
 
-Date and time created: 2025/12/20 13:49:32
+Date and time created: 2025/12/23 10:43:20
 
 Samvatsaram : Vishwaavasu
 
@@ -13,45 +13,8 @@ Masam : Paushaha
 
 Paksham : Shukla
 
-
 Thithi details: 
 =========
-
-Prathama: 2025/12/04 15:14 to 2025/12/05 11:26
-
-Dwitheeya: 2025/12/05 11:26 to 2025/12/06 07:56
-
-Trutheeya: 2025/12/06 07:56 to 2025/12/07 04:55
-
-Chathurthi: 2025/12/07 04:55 to 2025/12/08 02:33
-
-Panchami: 2025/12/08 02:33 to 2025/12/09 00:59
-
-Shashti: 2025/12/09 00:59 to 2025/12/10 00:17
-
-Sapthami: 2025/12/10 00:17 to 2025/12/11 00:27
-
-Ashtami: 2025/12/11 00:27 to 2025/12/12 01:27
-
-Navami: 2025/12/12 01:27 to 2025/12/13 03:08
-
-Dashami: 2025/12/13 03:08 to 2025/12/14 05:20
-
-Ekadashi: 2025/12/14 05:20 to 2025/12/15 07:50
-
-Dwadashi: 2025/12/15 07:50 to 2025/12/16 10:27
-
-Tryodashi: 2025/12/16 10:27 to 2025/12/17 13:03
-
-Chathurdashi: 2025/12/17 13:03 to 2025/12/18 15:29
-
-Amavasya: 2025/12/18 15:29 to 2025/12/19 17:43
-
-Prathama: 2025/12/19 17:43 to 2025/12/20 19:41
-
-Dwitheeya: 2025/12/20 19:41 to 2025/12/21 21:22
-
-Trutheeya: 2025/12/21 21:22 to 2025/12/22 22:43
 
 Chathurthi: 2025/12/22 22:43 to 2025/12/23 23:41
 
@@ -65,42 +28,22 @@ Ashtami: 2025/12/26 23:40 to 2025/12/27 22:29
 
 Navami: 2025/12/27 22:29 to 2025/12/28 20:42
 
-Next Thithi: Dashami
+Dashami: 2025/12/28 20:42 to 2025/12/29 18:21
+
+Ekadashi: 2025/12/29 18:21 to 2025/12/30 15:30
+
+Dwadashi: 2025/12/30 15:30 to 2025/12/31 12:18
+
+Tryodashi: 2025/12/31 12:18 to 2026/01/01 08:52
+
+Chathurdashi: 2026/01/01 08:52 to 2026/01/02 05:23
+
+Pournamaasi: 2026/01/02 05:23 to 2026/01/03 02:02
+
+Next Thithi: Prathama
 
 Nakshatram details: 
 ==============
-
-Rohini: 2025/12/04 01:22 to 2025/12/04 22:14
-
-Mrugasheersham: 2025/12/04 22:14 to 2025/12/05 19:16
-
-Aardra: 2025/12/05 19:16 to 2025/12/06 16:41
-
-Punarvasu: 2025/12/06 16:41 to 2025/12/07 14:39
-
-Pushya: 2025/12/07 14:39 to 2025/12/08 13:20
-
-Ashresha: 2025/12/08 13:20 to 2025/12/09 12:50
-
-Magha: 2025/12/09 12:50 to 2025/12/10 13:12
-
-Poorvaphalguni: 2025/12/10 13:12 to 2025/12/11 14:23
-
-Uttaraphalguni: 2025/12/11 14:23 to 2025/12/12 16:18
-
-Hasta: 2025/12/12 16:18 to 2025/12/13 18:46
-
-Chitra: 2025/12/13 18:46 to 2025/12/14 21:36
-
-Swaathi: 2025/12/14 21:36 to 2025/12/16 00:37
-
-Vishaakha: 2025/12/16 00:37 to 2025/12/17 03:39
-
-Anuradha: 2025/12/17 03:39 to 2025/12/18 06:34
-
-Jyeshtaa: 2025/12/18 06:34 to 2025/12/19 09:19
-
-Mula: 2025/12/19 09:19 to 2025/12/20 11:49
 
 Poorvaashada: 2025/12/20 11:49 to 2025/12/21 14:03
 
@@ -120,47 +63,21 @@ Revathi: 2025/12/27 19:11 to 2025/12/28 18:09
 
 Ashwini: 2025/12/28 18:09 to 2025/12/29 16:32
 
-Next Nakshatram: Apabharani
+Apabharani: 2025/12/29 16:32 to 2025/12/30 14:26
+
+Krutthika: 2025/12/30 14:26 to 2025/12/31 11:58
+
+Rohini: 2025/12/31 11:58 to 2026/01/01 09:16
+
+Mrugasheersham: 2026/01/01 09:16 to 2026/01/02 06:32
+
+Aardra: 2026/01/02 06:32 to 2026/01/03 03:56
+
+Next Nakshatram: Punarvasu
 
 
 Yogam details: 
 ==========
-
-Siddhaha: 2025/12/03 23:00 to 2025/12/04 18:34
-
-Saadhyaha: 2025/12/04 18:34 to 2025/12/05 14:15
-
-Shubhaha: 2025/12/05 14:15 to 2025/12/06 10:12
-
-Shuklaha: 2025/12/06 10:12 to 2025/12/07 06:33
-
-Braahmaha: 2025/12/07 06:33 to 2025/12/08 03:27
-
-
-Indraha/Mahendraha: 2025/12/08 03:27 to 2025/12/09 00:59
-
-Vydruthihi: 2025/12/09 00:59 to 2025/12/09 23:12
-
-Vishkambhaha: 2025/11/09 23:12 to 2025/12/10 22:06
-
-Preethihi: 2025/12/10 22:06 to 2025/12/11 21:37
-
-Aayushmaan: 2025/12/11 21:37 to 2025/12/12 21:42
-
-Sowbhagyaha: 2025/12/12 21:42 to 2025/12/13 22:11
-
-Shobhanaha: 2025/12/13 22:11 to 2025/12/14 22:56
-
-Athigandaha: 2025/12/14 22:56 to 2025/12/15 23:48
-
-Sukarma: 2025/12/15 23:48 to 2025/12/17 00:42
-
-Dhruthihi: 2025/12/17 00:42 to 2025/12/18 01:31
-
-Shoolaha: 2025/12/18 01:31 to 2025/12/19 02:12
-
-Gandaha: 2025/12/19 02:12 to 2025/12/20 02:43
-
 Vruddhihi: 2025/12/20 02:43 to 2025/12/21 03:01
 
 Dhruvaha: 2025/12/21 03:01 to 2025/12/22 03:06
@@ -181,71 +98,23 @@ Parighaha: 2025/12/27 20:40 to 2025/12/28 18:02
 
 Shivaha: 2025/12/28 18:02 to 2025/12/29 14:58
 
-Next Yogam: Siddhaha
+Siddhaha: 2025/12/29 14:58 to 2025/12/30 11:28
+
+Saadhyaha: 2025/12/30 11:28 to 2025/12/31 07:40
+
+Shubhaha: 2025/12/31 07:40 to 2026/01/01 03:39
+
+Shuklaha: 2026/01/01 03:39 to 2026/01/01 23:33
+
+Braahmaha: 2026/01/01 23:33 to 2026/01/02 19:32
+
+Indraha/Mahendraha: 2026/01/02 19:32 to 2026/01/03 15:42
+
+Next Yogam: Vydruthihi
 
 
 Karanam details: 
 ============
-
-Baalavaha: 2025/12/04 15:14 to 2025/12/05 01:18
-
-Kowlavaha: 2025/12/05 01:18 to 2025/12/05 11:26
-
-Taithilaha: 2025/12/05 11:26 to 2025/12/05 21:38
-
-Garaja: 2025/12/05 21:38 to 2025/12/06 07:56
-
-Vanijaha: 2025/12/06 07:56 to 2025/12/06 18:21
-
-Vishtihi/Bhadra: 2025/12/06 18:21 to 2025/12/07 04:55
-
-Bavaha: 2025/12/07 04:55 to 2025/12/07 15:39
-
-Baalavaha: 2025/12/07 15:39 to 2025/12/08 02:33
-
-Kowlavaha: 2025/12/08 02:33 to 2025/12/08 13:40
-
-Taithilaha: 2025/12/08 13:40 to 2025/12/09 00:59
-
-Garaja: 2025/12/09 00:59 to 2025/12/09 12:31
-
-Vanijaha: 2025/12/09 12:31 to 2025/12/10 00:17
-
-Vishtihi/Bhadra: 2025/12/10 00:17 to 2025/12/10 12:15
-
-Bavaha: 2025/12/10 12:15 to 2025/12/11 00:27
-
-Baalavaha: 2025/12/11 00:27 to 2025/12/11 12:51
-
-Kowlavaha: 2025/12/11 12:51 to 2025/12/12 01:27
-
-Taithilaha: 2025/12/12 01:27 to 2025/12/12 14:13
-
-Garaja: 2025/12/12 14:13 to 2025/12/13 03:08
-
-Vanijaha: 2025/12/13 03:08 to 2025/12/13 16:11
-
-Vishtihi/Bhadra: 2025/12/13 16:11 to 2025/12/14 05:20
-
-Bavaha: 2025/12/14 05:20 to 2025/12/14 18:33
-
-Baalavaha: 2025/12/14 18:33 to 2025/12/15 07:50
-
-Kowlavaha: 2025/12/15 07:50 to 2025/12/15 21:08
-
-Taithilaha: 2025/12/15 21:08 to 2025/12/16 10:27
-
-Garaja: 2025/12/16 10:27 to 2025/12/16 23:46
-
-Vanijaha: 2025/12/16 23:46 to 2025/12/17 13:03
-
-Vishtihi/Bhadra: 2025/12/17 13:03 to 2025/12/18 02:17
-
-Shakuni: 2025/12/18 02:17 to 2025/12/18 15:29
-
-Chathushpaath: 2025/12/18 15:29 to 2025/12/19 04:38
-
-Naaga: 2025/12/19 04:38 to 2025/12/19 17:43
 
 Kimstughna: 2025/12/19 17:43 to 2025/12/20 06:44
 
@@ -285,21 +154,51 @@ Kowlavaha: 2025/12/28 09:40 to 2025/12/28 20:42
 
 Taithilaha: 2025/12/28 20:42 to 2025/12/29 07:36
 
-Next Karanam: Garaja
+Garaja: 2025/12/29 07:36 to 2025/12/29 18:21
+
+Vanijaha: 2025/12/29 18:21 to 2025/12/30 04:59
+
+Vishtihi/Bhadra: 2025/12/30 04:59 to 2025/12/30 15:30
+
+Bavaha: 2025/12/30 15:30 to 2025/12/31 01:56
+
+Baalavaha: 2025/12/31 01:56 to 2025/12/31 12:18
+
+Kowlavaha: 2025/12/31 12:18 to 2025/12/31 22:36
+
+Taithilaha: 2025/12/31 22:36 to 2026/01/01 08:52
+
+Garaja: 2026/01/01 08:52 to 2026/01/01 19:08
+
+Vanijaha: 2026/01/01 19:08 to 2026/01/02 05:23
+
+Vishtihi/Bhadra: 2026/01/02 05:23 to 2026/01/02 15:41
+
+Bavaha: 2026/01/02 15:41 to 2026/01/03 02:02
+
+Baalavaha: 2026/01/03 02:02 to 2026/01/03 12:28
+
+Next Karanam: Kowlavaha
 
 Vaasaram details:
 =============
 
-2025/12/22: Monday, Indu
-2025/12/23: Tuesday, Bhowma
-2025/12/24: Wednesday, Sowmya
-2025/12/25: Thursday, Guru
-2025/12/26: Friday, Bhrugu
-2025/12/27: Saturday, Sthira
-2025/12/28: Sunday, Bhanu
-2025/12/29: Monday, Indu
+2025/12/22: Monday, Indu, Sunrise:  07:49:00, Sunset: 16:31:00
+2025/12/23: Tuesday, Bhowma, Sunrise:  07:49:00, Sunset: 16:31:00
+2025/12/24: Wednesday, Sowmya, Sunrise:  07:49:00, Sunset: 16:32:00
+2025/12/25: Thursday, Guru, Sunrise:  07:50:00, Sunset: 16:32:00
+2025/12/26: Friday, Bhrugu, Sunrise:  07:50:45, Sunset: 16:34:25
+2025/12/27: Saturday, Sthira, Sunrise:  07:50:45, Sunset: 16:34:25
+2025/12/28: Sunday, Bhanu, Sunrise:  07:50:45, Sunset: 16:34:25
+2025/12/29: Monday, Indu, Sunrise:  07:50:55, Sunset: 16:35:13
+2025/12/30: Tuesday, Bhowma, Sunrise:  07:51:03, Sunset: 16:36:04
+2025/12/31: Wednesday, Sowmya, Sunrise:  07:51:08, Sunset: 16:36:56
+2026/01/01: Thursday, Guru, Sunrise:  07:51:11, Sunset: 16:37:51
+2026/01/02: Friday, Bhrugu, Sunrise:  07:51:11, Sunset: 16:38:48
+2026/01/03: Saturday, Sthira, Sunrise:  07:51:08, Sunset: 16:39:47
 
 Shubham
+
 
 
 
