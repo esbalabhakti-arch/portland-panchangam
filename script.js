@@ -26,6 +26,23 @@ function formatDateYMD(dt) {
   return `${y}/${m}/${d}`;
 }
 
+// Format time as HH:MM:SS
+function formatHMSFromDate(dt) {
+  const hh = String(dt.getHours()).padStart(2, "0");
+  const mm = String(dt.getMinutes()).padStart(2, "0");
+  const ss = String(dt.getSeconds()).padStart(2, "0");
+  return `${hh}:${mm}:${ss}`;
+}
+
+// Parse "HH:MM:SS"
+function parseHMS(hms) {
+  const m = String(hms).trim().match(/^(\d{2}):(\d{2}):(\d{2})$/);
+  if (!m) return null;
+  return { h: Number(m[1]), mi: Number(m[2]), s: Number(m[3]) };
+}
+
+// ---- Interval parsing ----
+
 // Parse a single interval line
 // Example: "Prathama: 2025/12/04 15:14 to 2025/12/05 11:26"
 function parseIntervalLine(line) {
@@ -125,26 +142,49 @@ function getBackendTimestamp(lines) {
   if (!line) return null;
   const parts = line.split(":");
   if (parts.length < 2) return null;
-  // Join everything after the first ":" in case there are extra colons
   return parts.slice(1).join(":").trim();
 }
 
-// Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
-function parseVaasaramMap(sectionLines) {
+/**
+ * Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
+ * Expected line format (as in your file):
+ * 2025/12/22: Monday, Indu, Sunrise: 07:49:00, Sunset: 16:31:00
+ */
+function parseVaasaramDetailsMap(sectionLines) {
   const map = new Map();
-  for (const raw of sectionLines) {
-    const line = raw.trim();
-    if (!line) continue;
-    if (line.startsWith("=")) continue;
 
-    // Example: "2025/12/22: Monday, Indu"
-    const m = line.match(/^(\d{4})\/(\d{2})\/(\d{2})\s*:\s*(.+)$/);
+  for (const raw0 of sectionLines) {
+    let raw = raw0 || "";
+    // Normalize non-breaking spaces
+    raw = raw.replace(/\u00A0/g, " ").trim();
+    if (!raw) continue;
+    if (raw.startsWith("=")) continue;
+
+    const m = raw.match(/^(\d{4}\/\d{2}\/\d{2})\s*:\s*(.+)$/);
     if (!m) continue;
 
-    const ymd = `${m[1]}/${m[2]}/${m[3]}`;
-    const val = m[4].trim();
-    map.set(ymd, val);
+    const ymd = m[1].trim();
+    const rest = m[2].trim();
+
+    // Extract weekday + vasaram + sunrise + sunset
+    // weekday, vasaram, Sunrise: HH:MM:SS, Sunset: HH:MM:SS
+    const re = /^([^,]+)\s*,\s*([^,]+)\s*,\s*Sunrise:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*,\s*Sunset:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*$/i;
+    const mm = rest.match(re);
+    if (!mm) {
+      // If format isn't perfect, still store raw text for vasaram display
+      map.set(ymd, { raw: rest });
+      continue;
+    }
+
+    map.set(ymd, {
+      weekday: mm[1].trim(),
+      vasaram: mm[2].trim(),
+      sunrise: mm[3].trim(),
+      sunset: mm[4].trim(),
+      raw: rest
+    });
   }
+
   return map;
 }
 
@@ -200,21 +240,66 @@ async function main() {
     const yogaIntervals   = getIntervalsFromSection(yogaSection);
     const karanaIntervals = getIntervalsFromSection(karanaSection);
 
-    const now = new Date(); // local time on the user's device
+    const now = new Date(); // local time on user's device
+
     if (nowDisplay) {
       nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
     }
 
-    // ✅ NEW: Vaasaram (match today's local YYYY/MM/DD to Vaasaram section in the file)
+    // --- Vaasaram + Sunrise/Sunset/Noon (from Vaasaram details) ---
     const vasEl = document.getElementById("vasaram-today");
-    if (vasEl) {
-      // Try both spellings just in case: "Vaasaram details" or "Vasaram details"
-      let vasSection = extractSection(lines, "Vaasaram details");
-      if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
+    const sunriseEl = document.getElementById("sunrise-time");
+    const sunsetEl = document.getElementById("sunset-time");
+    const noonEl = document.getElementById("noon-time");
 
-      const vasMap = parseVaasaramMap(vasSection);
-      const todayKey = formatDateYMD(now);
-      vasEl.textContent = vasMap.get(todayKey) || "Not available";
+    // Try both spellings just in case
+    let vasSection = extractSection(lines, "Vaasaram details");
+    if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
+
+    const vasMap = parseVaasaramDetailsMap(vasSection);
+    const todayKey = formatDateYMD(now);
+    const todayObj = vasMap.get(todayKey);
+
+    if (!todayObj) {
+      if (vasEl) vasEl.textContent = "Not available";
+      if (sunriseEl) sunriseEl.textContent = "–";
+      if (sunsetEl) sunsetEl.textContent = "–";
+      if (noonEl) noonEl.textContent = "–";
+    } else {
+      // Vaasaram display
+      if (vasEl) {
+        if (todayObj.weekday && todayObj.vasaram) {
+          vasEl.textContent = `${todayObj.weekday}, ${todayObj.vasaram}`;
+        } else {
+          // fallback to raw if parsing failed
+          vasEl.textContent = todayObj.raw || "Not available";
+        }
+      }
+
+      // Sunrise/Sunset/Noon display (only if parsed)
+      if (todayObj.sunrise && todayObj.sunset) {
+        if (sunriseEl) sunriseEl.textContent = todayObj.sunrise;
+        if (sunsetEl) sunsetEl.textContent = todayObj.sunset;
+
+        const s = parseHMS(todayObj.sunrise);
+        const e = parseHMS(todayObj.sunset);
+
+        if (s && e) {
+          const sunriseDt = new Date(now.getFullYear(), now.getMonth(), now.getDate(), s.h, s.mi, s.s);
+          const sunsetDt  = new Date(now.getFullYear(), now.getMonth(), now.getDate(), e.h, e.mi, e.s);
+
+          const noonMs = sunriseDt.getTime() + Math.floor((sunsetDt.getTime() - sunriseDt.getTime()) / 2);
+          const noonDt = new Date(noonMs);
+
+          if (noonEl) noonEl.textContent = formatHMSFromDate(noonDt);
+        } else {
+          if (noonEl) noonEl.textContent = "–";
+        }
+      } else {
+        if (sunriseEl) sunriseEl.textContent = "–";
+        if (sunsetEl) sunsetEl.textContent = "–";
+        if (noonEl) noonEl.textContent = "–";
+      }
     }
 
     // ----- Tithi -----
@@ -279,6 +364,7 @@ async function main() {
 
   } catch (err) {
     console.error(err);
+    const statusEl = document.getElementById("status");
     if (statusEl) {
       statusEl.textContent = "Error loading panchangam data. Check console.";
     }
