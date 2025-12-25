@@ -1,5 +1,49 @@
 // script.js
 
+// ---- Nakshatra name mapping (English -> Sanskrit/Telugu/Tamil) ----
+// Display format: English / Sanskrit / Telugu / Tamil
+const NAKSHATRA_MAP = {
+  "Ashwini": { "sa": "अश्विनी", "te": "అశ్విని", "ta": "அசுவினி" },
+  "Apabharani": { "sa": "भरणी", "te": "భరణి", "ta": "பரணி" },
+  "Krutthika": { "sa": "कृत्तिका", "te": "కృత్తిక", "ta": "கிருத்திகை" },
+  "Rohini": { "sa": "रोहिणी", "te": "రోహిణి", "ta": "ரோகிணி" },
+  "Mrugasheersham": { "sa": "मृगशीर्षा", "te": "మృగశిర", "ta": "மிருகசீரிடம்" },
+  "Aardra": { "sa": "आर्द्रा", "te": "ఆరుద్ర", "ta": "திருவாதிரை" },
+  "Punarvasu": { "sa": "पुनर्वसू", "te": "పునర్వసు", "ta": "புனர்பூசம்" },
+  "Pushya": { "sa": "पुष्यः", "te": "పుష్య", "ta": "பூசம்" },
+  "Ashresha": { "sa": "आश्रेषा", "te": "ఆశ్లేష", "ta": "ஆயில்யம்" },
+  "Magha": { "sa": "मघा", "te": "మఘ", "ta": "மகம்" },
+  "Poorvaphalguni": { "sa": "पूर्वफल्गुनी", "te": "పూర్వఫల్గుణి", "ta": "பூரம்" },
+  "Uttaraphalguni": { "sa": "उत्तरफल्गुनी", "te": "ఉత్తరఫల్గుణి", "ta": "உத்திரம்" },
+  "Hasta": { "sa": "हस्तः", "te": "హస్త", "ta": "ஹஸ்தம்" },
+  "Chitra": { "sa": "चित्रा", "te": "చిత్ర", "ta": "சித்திரை" },
+  "Swaathi": { "sa": "स्वाती", "te": "స్వాతి", "ta": "சுவாதி" },
+  "Vishaakha": { "sa": "विशाखा", "te": "విశాఖ", "ta": "விசாகம்" },
+  "Anuradha": { "sa": "अनुराधा", "te": "అనురాధ", "ta": "அனுஷம்" },
+  "Jyeshtaa": { "sa": "ज्येष्ठा", "te": "జ్యేష్ఠ", "ta": "கேட்டை" },
+  "Mula": { "sa": "मूला", "te": "మూల", "ta": "மூலம்" },
+  "Poorvaashada": { "sa": "पूर्वाषाढा", "te": "పూర్వాషాఢ", "ta": "பூராடம்" },
+  "Uttaraashada": { "sa": "उत्तराषाढा", "te": "ఉత్తరాషాఢ", "ta": "உத்திராடம்" },
+  "Shravana": { "sa": "श्रवणः", "te": "శ్రవణ", "ta": "திருவோணம்" },
+  "Shravishta": { "sa": "श्रविष्ठा", "te": "శ్రవిష్ఠ", "ta": "அவிட்டம்" },
+  "Shatabhishak": { "sa": "शतभिषक्", "te": "శతభిష", "ta": "சதயம்" },
+  "Poorvaproshtapada": { "sa": "पूर्वप्रोष्ठपदा", "te": "పూర్వప్రోష్ఠపద", "ta": "பூரட்டாதி" },
+  "Uttaraproshtapada": { "sa": "उत्तरप्रोष्ठपदा", "te": "ఉత్తరప్రోష్ఠపద", "ta": "உத்திரட்டாதி" },
+  "Revathi": { "sa": "रेवती", "te": "రేవతి", "ta": "ரேவதி" }
+};
+
+// Normalize keys so minor spacing/case differences still match
+function normalizeKey(s) {
+  return String(s || "").trim();
+}
+
+function formatNakshatraDisplay(englishName) {
+  const key = normalizeKey(englishName);
+  const m = NAKSHATRA_MAP[key];
+  if (!m) return key; // fallback to English only if not found
+  return `${key} / ${m.sa} / ${m.te} / ${m.ta}`;
+}
+
 // ---- Utilities ----
 
 // Create a Date in local time from numeric components
@@ -308,16 +352,17 @@ async function main() {
       document.getElementById("tithi-next").textContent = "–";
     }
 
-    // ----- Nakshatra -----
+    // ----- Nakshatra (UPDATED: multi-language display) -----
     const { current: nakCur, next: nakNext } = findCurrentAndNext(nakIntervals, now);
+
     document.getElementById("nak-current").textContent =
-      nakCur ? nakCur.name : "Not in range";
+      nakCur ? formatNakshatraDisplay(nakCur.name) : "Not in range";
     document.getElementById("nak-remaining").textContent =
       nakCur ? formatTimeRemaining(nakCur.end, now) : "";
 
     if (nakNext) {
       document.getElementById("nak-next").textContent =
-        `${nakNext.name} (starts: ${formatDateTime(nakNext.start)})`;
+        `${formatNakshatraDisplay(nakNext.name)} (starts: ${formatDateTime(nakNext.start)})`;
     } else {
       document.getElementById("nak-next").textContent = "–";
     }
