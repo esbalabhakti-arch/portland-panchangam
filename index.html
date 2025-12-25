@@ -36,7 +36,10 @@
     *{ box-sizing: border-box; }
 
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-family:
+        ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+        "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Tamil",
+        sans-serif;
       max-width: 900px;
       margin: 14px auto 18px;
       padding: 0 10px;
@@ -174,6 +177,7 @@
       font-weight: 750;
       color: var(--textDark);
       font-size: 0.90rem;
+      word-break: break-word;     /* important for long multi-language nakshatra */
     }
     .time-remaining{
       font-size: 0.82rem;
@@ -323,7 +327,8 @@
 
   <div class="revisions">
     <h3>🧾 Revisions</h3>
-    <pre>Rev2: 12/23/25 -  Sunrise / Sunset / noon time added
+    <pre> Rev3: 12/24/25 - Nakshatra names multi-lingual
+Rev2: 12/23/25 -  Sunrise / Sunset / noon time added
 Rev1: 12/21/25 - Vasaram section added
 Rev0:  12/15/25</pre>
   </div>
@@ -338,4 +343,3 @@ Rev0:  12/15/25</pre>
   <script src="script.js"></script>
 </body>
 </html>
-
