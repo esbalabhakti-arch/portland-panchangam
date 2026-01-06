@@ -191,8 +191,11 @@ function getBackendTimestamp(lines) {
 
 /**
  * Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
- * Expected line format:
+ * Expected line format (old):
  * 2025/12/22: Monday, Indu, Sunrise: 07:49:00, Sunset: 16:31:00
+ *
+ * New format (optional addition):
+ * 2026/01/06: Tuesday, Bhowma, Sunrise: 07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:00:00 to 15:00:00
  */
 function parseVaasaramDetailsMap(sectionLines) {
   const map = new Map();
@@ -209,8 +212,10 @@ function parseVaasaramDetailsMap(sectionLines) {
     const ymd = m[1].trim();
     const rest = m[2].trim();
 
-    const re = /^([^,]+)\s*,\s*([^,]+)\s*,\s*Sunrise:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*,\s*Sunset:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*$/i;
+    // NOTE: Aparaanha kaalam is optional and captured AS IS (no modifications)
+    const re = /^([^,]+)\s*,\s*([^,]+)\s*,\s*Sunrise:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*,\s*Sunset:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})(?:\s*,\s*Aparaanha\s+kaalam:\s*(.+))?\s*$/i;
     const mm = rest.match(re);
+
     if (!mm) {
       map.set(ymd, { raw: rest });
       continue;
@@ -221,6 +226,7 @@ function parseVaasaramDetailsMap(sectionLines) {
       vasaram: mm[2].trim(),
       sunrise: mm[3].trim(),
       sunset: mm[4].trim(),
+      aparahna: mm[5] ? String(mm[5]).trim() : null, // <-- time range only, AS IS
       raw: rest
     });
   }
@@ -286,11 +292,12 @@ async function main() {
       nowDisplay.textContent = `Current time (your browser): ${now.toLocaleString()}`;
     }
 
-    // --- Vaasaram + Sunrise/Sunset/Noon ---
+    // --- Vaasaram + Sunrise/Sunset/Noon + Aparaanha (AS IS) ---
     const vasEl = document.getElementById("vasaram-today");
     const sunriseEl = document.getElementById("sunrise-time");
     const sunsetEl = document.getElementById("sunset-time");
     const noonEl = document.getElementById("noon-time");
+    const aparahnaEl = document.getElementById("aparahna-time");
 
     let vasSection = extractSection(lines, "Vaasaram details");
     if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
@@ -304,6 +311,7 @@ async function main() {
       if (sunriseEl) sunriseEl.textContent = "–";
       if (sunsetEl) sunsetEl.textContent = "–";
       if (noonEl) noonEl.textContent = "–";
+      if (aparahnaEl) aparahnaEl.textContent = "–";
     } else {
       if (vasEl) {
         if (todayObj.weekday && todayObj.vasaram) {
@@ -311,6 +319,11 @@ async function main() {
         } else {
           vasEl.textContent = todayObj.raw || "Not available";
         }
+      }
+
+      // Aparaanha kaalam: publish time range AS IS (do not change)
+      if (aparahnaEl) {
+        aparahnaEl.textContent = todayObj.aparahna ? todayObj.aparahna : "–";
       }
 
       if (todayObj.sunrise && todayObj.sunset) {
