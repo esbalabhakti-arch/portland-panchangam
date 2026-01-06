@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam pan changam 
 
-Date and time created: 2026/01/02 12:48:27
+Date and time created: 2026/01/06 06:20:00(*)
 
 Samvatsaram : Vishwaavasu
 
@@ -174,14 +174,21 @@ Vaasaram details:
 2026/01/03: Saturday, Sthira, Sunrise:  07:51:08, Sunset: 16:39:47
 2026/01/04: Sunday, Bhanu, Sunrise:  07:51:02, Sunset: 16:40:47
 2026/01/05: Monday, Indu, Sunrise:  07:50:54, Sunset: 16:41:50
-2026/01/06: Tuesday, Bhowma, Sunrise:  07:50:43, Sunset: 16:42:54
-2026/01/07: Wednesday, Sowmya, Sunrise:  07:50:30, Sunset: 16:44:00
-2026/01/08: Thursday, Guru, Sunrise:  07:50:14, Sunset: 16:45:07
-2026/01/09: Friday, Bhrugu, Sunrise:  07:49:55, Sunset: 16:46:16
-2026/01/10: Saturday, Sthira, Sunrise:  07:49:34, Sunset: 16:47:27
-2026/01/11: Sunday, Bhanu, Sunrise:  07:49:10, Sunset: 16:48:39
-2026/01/12: Monday, Indu, Sunrise:  07:48:44, Sunset: 16:49:52
+2026/01/06: Tuesday, Bhowma, Sunrise:  07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/07: Wednesday, Sowmya, Sunrise:  07:50:30, Sunset: 16:44:00, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/08: Thursday, Guru, Sunrise:  07:50:14, Sunset: 16:45:07, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/09: Friday, Bhrugu, Sunrise:  07:49:55, Sunset: 16:46:16, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/10: Saturday, Sthira, Sunrise:  07:49:34, Sunset: 16:47:27, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/11: Sunday, Bhanu, Sunrise:  07:49:10, Sunset: 16:48:39, Aparaanha kaalam: 13:12:51 to 15:00:45
+2026/01/12: Monday, Indu, Sunrise:  07:48:44, Sunset: 16:49:52, Aparaanha kaalam: 13:13:24 to 15:01:38
+2026/01/13: Tuesday, Bhowma, Sunrise:  07:48:15, Sunset: 16:51:07, Aparaanha kaalam: 13:13:58 to 15:02:32
+2026/01/14: Wednesday, Sowmya, Sunrise:  07:47:44, Sunset: 16:52:22, Aparaanha kaalam: 13:14:30 to 15:03:26
+2026/01/15: Thursday, Guru, Sunrise:  07:47:10, Sunset: 16:53:39, Aparaanha kaalam: 13:15:03 to 15:04:21
+2026/01/16: Friday, Bhrugu, Sunrise:  07:46:34, Sunset: 16:54:57, Aparaanha kaalam: 13:15:35 to 15:05:16
+2026/01/17: Saturday, Sthira, Sunrise:  07:45:55, Sunset: 16:56:16, Aparaanha kaalam: 13:16:07 to 15:06:11
+2026/01/18: Sunday, Bhanu, Sunrise:  07:45:14, Sunset: 16:57:36, Aparaanha kaalam: 13:16:39 to 15:07:07
 Shubham
+
 
 
 
