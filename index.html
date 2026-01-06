@@ -31,6 +31,8 @@
       --accentAmber:#f59e0b;
       --accentPink:#fb7185;
       --accentPurple:#a78bfa;
+
+      --dangerRed:#ef4444;
     }
 
     *{ box-sizing: border-box; }
@@ -190,6 +192,23 @@
       font-size: 0.88rem;
     }
 
+    /* ===== Aparaanha sub-box (inside Sandhyavandanam) ===== */
+    .aparahna-subbox{
+      margin-top: 8px;
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 2px solid rgba(239,68,68,0.35);
+      background: rgba(239,68,68,0.06);
+    }
+    .aparahna-subbox .label,
+    .aparahna-subbox .value{
+      color: var(--dangerRed);
+      font-weight: 900;
+    }
+    .aparahna-subbox .label{
+      margin-right: 6px;
+    }
+
     /* ===== Revisions ===== */
     .revisions{
       margin-top: 10px;
@@ -319,6 +338,12 @@
         <div class="meta-row"><span class="label">Sunrise:</span> <span id="sunrise-time" class="value">–</span></div>
         <div class="meta-row"><span class="label">Sunset:</span> <span id="sunset-time" class="value">–</span></div>
         <div class="meta-row"><span class="label">Noon (mid):</span> <span id="noon-time" class="value">–</span></div>
+
+        <!-- 4th item: Aparaanha kaalam (RED BOLD) -->
+        <div class="aparahna-subbox">
+          <span class="label">Aparaanha kaalam:</span>
+          <span id="aparahna-time" class="value">–</span>
+        </div>
       </div>
 
     </div>
@@ -327,7 +352,8 @@
 
   <div class="revisions">
     <h3>🧾 Revisions</h3>
-    <pre> Rev3: 12/24/25 - Nakshatra names multi-lingual
+    <pre>Rev4: 01/06/26 - Publishing Aparaanha kaalam for the day (used primarily for shraddha thithi)
+Rev3: 12/24/25 - Nakshatra names multi-lingual
 Rev2: 12/23/25 -  Sunrise / Sunset / noon time added
 Rev1: 12/21/25 - Vasaram section added
 Rev0:  12/15/25</pre>
