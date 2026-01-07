@@ -171,14 +171,14 @@ Vaasaram details:
 2025/12/31: Wednesday, Sowmya, Sunrise:  07:51:08, Sunset: 16:36:56
 2026/01/01: Thursday, Guru, Sunrise:  07:51:11, Sunset: 16:37:51
 2026/01/02: Friday, Bhrugu, Sunrise:  07:51:11, Sunset: 16:38:48
-2026/01/03: Saturday, Sthira, Sunrise:  07:51:08, Sunset: 16:39:47
-2026/01/04: Sunday, Bhanu, Sunrise:  07:51:02, Sunset: 16:40:47
-2026/01/05: Monday, Indu, Sunrise:  07:50:54, Sunset: 16:41:50
-2026/01/06: Tuesday, Bhowma, Sunrise:  07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:00:00 to 15:00:00
-2026/01/07: Wednesday, Sowmya, Sunrise:  07:50:30, Sunset: 16:44:00, Aparaanha kaalam: 13:00:00 to 15:00:00
-2026/01/08: Thursday, Guru, Sunrise:  07:50:14, Sunset: 16:45:07, Aparaanha kaalam: 13:00:00 to 15:00:00
-2026/01/09: Friday, Bhrugu, Sunrise:  07:49:55, Sunset: 16:46:16, Aparaanha kaalam: 13:00:00 to 15:00:00
-2026/01/10: Saturday, Sthira, Sunrise:  07:49:34, Sunset: 16:47:27, Aparaanha kaalam: 13:00:00 to 15:00:00
+2026/01/03: Saturday, Sthira, Sunrise:  07:51:08, Sunset: 16:39:47, Aparaanha kaalam: 13:08:19 to 14:54:03
+2026/01/04: Sunday, Bhanu, Sunrise:  07:51:02, Sunset: 16:40:47, Aparaanha kaalam: 13:08:53 to 14:54:50
+2026/01/05: Monday, Indu, Sunrise:  07:50:54, Sunset: 16:41:50, Aparaanha kaalam: 13:09:27 to 14:55:38
+2026/01/06: Tuesday, Bhowma, Sunrise:  07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:10:01 to 14:56:27
+2026/01/07: Wednesday, Sowmya, Sunrise:  07:50:30, Sunset: 16:44:00, Aparaanha kaalam: 13:10:36 to 14:57:18
+2026/01/08: Thursday, Guru, Sunrise:  07:50:14, Sunset: 16:45:07, Aparaanha kaalam: 13:11:09 to 14:58:08
+2026/01/09: Friday, Bhrugu, Sunrise:  07:49:55, Sunset: 16:46:16, Aparaanha kaalam: 13:11:43 to 14:58:59
+2026/01/10: Saturday, Sthira, Sunrise:  07:49:34, Sunset: 16:47:27, Aparaanha kaalam: 13:12:17 to 14:59:52
 2026/01/11: Sunday, Bhanu, Sunrise:  07:49:10, Sunset: 16:48:39, Aparaanha kaalam: 13:12:51 to 15:00:45
 2026/01/12: Monday, Indu, Sunrise:  07:48:44, Sunset: 16:49:52, Aparaanha kaalam: 13:13:24 to 15:01:38
 2026/01/13: Tuesday, Bhowma, Sunrise:  07:48:15, Sunset: 16:51:07, Aparaanha kaalam: 13:13:58 to 15:02:32
@@ -188,6 +188,7 @@ Vaasaram details:
 2026/01/17: Saturday, Sthira, Sunrise:  07:45:55, Sunset: 16:56:16, Aparaanha kaalam: 13:16:07 to 15:06:11
 2026/01/18: Sunday, Bhanu, Sunrise:  07:45:14, Sunset: 16:57:36, Aparaanha kaalam: 13:16:39 to 15:07:07
 Shubham
+
 
 
 
