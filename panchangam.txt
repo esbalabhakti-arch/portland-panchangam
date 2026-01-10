@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam pan changam 
 
-Date and time created: 2026/01/06 06:20:00(*)
+Date and time created: 2026/01/10 09:30:27
 
 Samvatsaram : Vishwaavasu
 
@@ -40,7 +40,19 @@ Ashtami: 2026/01/09 18:54 to 2026/01/10 20:50
 
 Navami: 2026/01/10 20:50 to 2026/01/11 23:13
 
-Next Thithi: Dashami
+Dashami: 2026/01/11 23:13 to 2026/01/13 01:48
+
+Ekadashi: 2026/01/13 01:48 to 2026/01/14 04:23
+
+Dwadashi: 2026/01/14 04:23 to 2026/01/15 06:47
+
+Tryodashi: 2026/01/15 06:47 to 2026/01/16 08:52
+
+Chathurdashi: 2026/01/16 08:52 to 2026/01/17 10:34
+
+Amaavaasya: 2026/01/17 10:34 to 2026/01/18 11:52
+
+Next Thithi: Prathama
 
 Nakshatram details: 
 ==============
@@ -69,7 +81,17 @@ Chitra: 2026/01/10 02:08 to 2026/01/11 04:40
 
 Swaathi: 2026/01/11 04:40 to 2026/01/12 07:33
 
-Next Nakshatram: Vishaakha
+Vishaakha: 2026/01/12 07:33 to 2026/01/13 10:34
+
+Anuradha: 2026/01/13 10:34 to 2026/01/14 13:32
+
+Jyeshtaa: 2026/01/14 13:32 to 2026/01/15 16:16
+
+Mula: 2026/01/15 16:16 to 2026/01/16 18:40
+
+Poorvaashada: 2026/01/16 18:40 to 2026/01/17 20:42
+
+Next Nakshatram: Uttaraashada
 
 
 Yogam details: 
@@ -105,7 +127,19 @@ Sukarma: 2026/01/10 03:24 to 2026/01/11 03:53
 
 Dhruthihi: 2026/01/11 03:53 to 2026/01/12 04:38
 
-Next Yogam: Shoolaha
+Shoolaha: 2026/01/12 04:38 to 2026/01/13 05:31
+
+Gandaha: 2026/01/13 05:31 to 2026/01/14 06:22
+
+Vruddhihi: 2026/01/14 06:22 to 2026/01/15 07:04
+
+Dhruvaha: 2026/01/15 07:04 to 2026/01/16 07:33
+
+Vyaaghaathaha: 2026/01/16 07:33 to 2026/01/17 07:44
+
+Harshanaha: 2026/01/17 07:44 to 2026/01/18 07:37
+
+Next Yogam: Vajram
 
 
 Karanam details: 
@@ -163,7 +197,29 @@ Garaja: 2026/01/11 09:59 to 2026/01/11 23:13
 
 Vanijaha: 2026/01/11 23:13 to 2026/01/12 12:30
 
-Next Karanam: Vishtihi/Bhadra
+Vishtihi/Bhadra: 2026/01/12 12:30 to 2026/01/13 01:48
+
+Bavaha: 2026/01/13 01:48 to 2026/01/13 15:06
+
+Baalavaha: 2026/01/13 15:06 to 2026/01/14 04:23
+
+Kowlavaha: 2026/01/14 04:23 to 2026/01/14 17:37
+
+Taithilaha: 2026/01/14 17:37 to 2026/01/15 06:47
+
+Garaja: 2026/01/15 06:47 to 2026/01/15 19:52
+
+Vanijaha: 2026/01/15 19:52 to 2026/01/16 08:52
+
+Vishtihi/Bhadra: 2026/01/16 08:52 to 2026/01/16 21:46
+
+Shakuni: 2026/01/16 21:46 to 2026/01/17 10:34
+
+Chathushpaath: 2026/01/17 10:34 to 2026/01/17 23:16
+
+Naaga: 2026/01/17 23:16 to 2026/01/18 11:52
+
+Next Karanam: Kimstughna
 
 Vaasaram details:
 =============
@@ -188,6 +244,7 @@ Vaasaram details:
 2026/01/17: Saturday, Sthira, Sunrise:  07:45:55, Sunset: 16:56:16, Aparaanha kaalam: 13:16:07 to 15:06:11
 2026/01/18: Sunday, Bhanu, Sunrise:  07:45:14, Sunset: 16:57:36, Aparaanha kaalam: 13:16:39 to 15:07:07
 Shubham
+
 
 
 
