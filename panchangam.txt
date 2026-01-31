@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam pan changam 
 
-Date and time created: 2026/01/25 13:29:02
+Date and time created: 2026/01/31 11:45:17
 
 Samvatsaram : Vishwaavasu
 
@@ -11,7 +11,7 @@ Ruthu : Shishira
 
 Masam : Maagha
 
-Paksham : Shukla
+Paksham : Krishna
 
 Thithi details: 
 =========
@@ -38,7 +38,23 @@ Chathurdashi: 2026/01/30 18:56 to 2026/01/31 16:23
 
 Pournamaasi: 2026/01/31 16:23 to 2026/02/01 14:09
 
-Next Thithi: Prathama
+Prathama: 2026/02/01 14:09 to 2026/02/02 12:22
+
+Dwitheeya: 2026/02/02 12:22 to 2026/02/03 11:11
+
+Trutheeya: 2026/02/03 11:11 to 2026/02/04 10:40
+
+Chathurthi: 2026/02/04 10:40 to 2026/02/05 10:52
+
+Panchami: 2026/02/05 10:52 to 2026/02/06 11:49
+
+Shashti: 2026/02/06 11:49 to 2026/02/07 13:24
+
+Sapthami: 2026/02/07 13:24 to 2026/02/08 15:31
+
+Ashtami: 2026/02/08 15:31 to 2026/02/09 17:57
+
+Next Thithi: Navami
 
 Nakshatram details: 
 ==============
@@ -65,7 +81,23 @@ Punarvasu: 2026/01/30 13:56 to 2026/01/31 12:02
 
 Pushya: 2026/01/31 12:02 to 2026/02/01 10:26
 
-Next Nakshatram: Ashresha
+Ashresha: 2026/02/01 10:26 to 2026/02/02 09:16
+
+Magha: 2026/02/02 09:16 to 2026/02/03 08:39
+
+Poorvaphalguni: 2026/02/03 08:39 to 2026/02/04 08:41
+
+Uttaraphalguni: 2026/02/04 08:41 to 2026/02/05 09:25
+
+Hasta: 2026/02/05 09:25 to 2026/02/06 10:52
+
+Chitra: 2026/02/06 10:52 to 2026/02/07 12:57
+
+Swaathi: 2026/02/07 12:57 to 2026/02/08 15:31
+
+Vishaakha: 2026/02/08 15:31 to 2026/02/09 18:23
+
+Next Nakshatram: Anuradha
 
 
 Yogam details: 
@@ -95,8 +127,27 @@ Vishkambhaha: 2026/01/30 03:25 to 2026/01/31 00:00
 
 Preethihi: 2026/01/31 00:00 to 2026/01/31 20:46
 
-Next Yogam: Aayushmaan
+Aayushmaan: 2026/01/31 20:46 to 2026/02/01 17:48
 
+Sowbhagyaha: 2026/02/01 17:48 to 2026/02/02 15:13
+
+Shobhanaha: 2026/02/02 15:13 to 2026/02/03 13:06
+
+Athigandaha: 2026/02/03 13:06 to 2026/02/04 11:31
+
+Sukarma: 2026/02/04 11:31 to 2026/02/05 10:31
+
+Dhruthihi: 2026/02/05 10:31 to 2026/02/06 10:04
+
+Shoolaha: 2026/02/06 10:04 to 2026/02/07 10:07
+
+Gandaha: 2026/02/07 10:07 to 2026/02/08 10:35
+
+Vruddhihi: 2026/02/08 10:35 to 2026/02/09 11:18
+
+Dhruvaha: 2026/02/09 11:18 to 2026/02/10 12:09
+
+Next Yogam: Vyaaghaathaha
 
 Karanam details: 
 ============
@@ -151,7 +202,39 @@ Vishtihi/Bhadra: 2026/01/31 16:23 to 2026/02/01 03:13
 
 Bavaha: 2026/02/01 03:13 to 2026/02/01 14:09
 
-Next Karanam: Baalavaha
+Baalavaha: 2026/02/01 14:09 to 2026/02/02 01:12
+
+Kowlavaha: 2026/02/02 01:12 to 2026/02/02 12:22
+
+Taithilaha: 2026/02/02 12:22 to 2026/02/02 23:42
+
+Garaja: 2026/02/02 23:42 to 2026/02/03 11:11
+
+Vanijaha: 2026/02/03 11:11 to 2026/02/03 22:50
+
+Vishtihi/Bhadra: 2026/02/03 22:50 to 2026/02/04 10:40
+
+Bavaha: 2026/02/04 10:40 to 2026/02/04 22:40
+
+Baalavaha: 2026/02/04 22:40 to 2026/02/05 10:52
+
+Kowlavaha: 2026/02/05 10:52 to 2026/02/05 23:15
+
+Taithilaha: 2026/02/05 23:15 to 2026/02/06 11:49
+
+Garaja: 2026/02/06 11:49 to 2026/02/07 00:32
+
+Vanijaha: 2026/02/07 00:32 to 2026/02/07 13:24
+
+Vishtihi/Bhadra: 2026/02/07 13:24 to 2026/02/08 02:25
+
+Bavaha: 2026/02/08 02:25 to 2026/02/08 15:31
+
+Baalavaha: 2026/02/08 15:31 to 2026/02/09 04:43
+
+Kowlavaha: 2026/02/09 04:43 to 2026/02/09 17:57
+
+Taithilaha: 2026/02/09 17:57 to 2026/02/10 07:13
 Vaasaram details:
 =============
 
@@ -167,7 +250,17 @@ Vaasaram details:
 2026/01/30: Friday, Bhrugu, Sunrise:  07:34:07, Sunset: 17:14:30, Aparaanha kaalam: 13:22:20 to 15:18:25
 2026/01/31: Saturday, Sthira, Sunrise:  07:32:58, Sunset: 17:15:57, Aparaanha kaalam: 13:22:45 to 15:19:21
 2026/02/01: Sunday, Bhanu, Sunrise:  07:31:47, Sunset: 17:17:25, Aparaanha kaalam: 13:23:09 to 15:20:17
+2026/02/02: Monday, Indu, Sunrise:  07:30:34, Sunset: 17:18:52, Aparaanha kaalam: 13:23:32 to 15:21:12
+2026/02/03: Tuesday, Bhowma, Sunrise:  07:29:20, Sunset: 17:20:20, Aparaanha kaalam: 13:23:56 to 15:22:08
+2026/02/04: Wednesday, Sowmya, Sunrise:  07:28:04, Sunset: 17:21:48, Aparaanha kaalam: 13:24:18 to 15:23:03
+2026/02/05: Thursday, Guru, Sunrise:  07:26:46, Sunset: 17:23:16, Aparaanha kaalam: 13:24:40 to 15:23:58
+2026/02/06: Friday, Bhrugu, Sunrise:  07:25:27, Sunset: 17:24:44, Aparaanha kaalam: 13:25:01 to 15:24:52
+2026/02/07: Saturday, Sthira, Sunrise:  07:24:06, Sunset: 17:26:12, Aparaanha kaalam: 13:25:21 to 15:25:46
+2026/02/08: Sunday, Bhanu, Sunrise:  07:22:43, Sunset: 17:27:40, Aparaanha kaalam: 13:25:41 to 15:26:40
+2026/02/09: Monday, Indu, Sunrise:  07:21:19, Sunset: 17:29:08, Aparaanha kaalam: 13:26:00 to 15:27:34
+2026/02/10: Tuesday, Bhowma, Sunrise:  07:19:53, Sunset: 17:30:35, Aparaanha kaalam: 13:26:18 to 15:28:26
 Shubham
+
 
 
 
