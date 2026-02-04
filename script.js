@@ -191,10 +191,7 @@ function getBackendTimestamp(lines) {
 
 /**
  * Parse "Vaasaram details" lines into a map keyed by "YYYY/MM/DD"
- * Expected line format (old):
- * 2025/12/22: Monday, Indu, Sunrise: 07:49:00, Sunset: 16:31:00
- *
- * New format (optional addition):
+ * Expected line format:
  * 2026/01/06: Tuesday, Bhowma, Sunrise: 07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:00:00 to 15:00:00
  */
 function parseVaasaramDetailsMap(sectionLines) {
@@ -234,17 +231,65 @@ function parseVaasaramDetailsMap(sectionLines) {
   return map;
 }
 
+// ---- View toggle (Instantaneous vs Range) ----
+
+function setView(mode) {
+  const instant = document.getElementById("instant-view");
+  const range = document.getElementById("range-view");
+  const btnInstant = document.getElementById("btn-instant");
+  const btnRange = document.getElementById("btn-range");
+  const subline = document.getElementById("view-subline");
+
+  const isRange = mode === "range";
+
+  if (instant) instant.style.display = isRange ? "none" : "block";
+  if (range) range.style.display = isRange ? "block" : "none";
+
+  if (btnInstant) btnInstant.setAttribute("aria-pressed", String(!isRange));
+  if (btnRange) btnRange.setAttribute("aria-pressed", String(isRange));
+
+  if (subline) {
+    subline.textContent = isRange
+      ? "🌙 Chaandramaanam Panchangam • Range View"
+      : "🌙 Chaandramaanam Panchangam • Instantaneous View";
+  }
+
+  try { localStorage.setItem("pdx_view_mode", mode); } catch(e) {}
+}
+
+function initViewToggle() {
+  const btnInstant = document.getElementById("btn-instant");
+  const btnRange = document.getElementById("btn-range");
+
+  if (btnInstant) btnInstant.addEventListener("click", () => setView("instant"));
+  if (btnRange) btnRange.addEventListener("click", () => setView("range"));
+
+  let saved = "instant";
+  try {
+    const v = localStorage.getItem("pdx_view_mode");
+    if (v === "range" || v === "instant") saved = v;
+  } catch(e) {}
+
+  setView(saved);
+}
+
 // ---- Main ----
 
 async function main() {
+  initViewToggle();
+
   const statusEl = document.getElementById("status");
   const nowDisplay = document.getElementById("now-display");
   const backendDisplay = document.getElementById("backend-time");
+  const rangeTextEl = document.getElementById("range-text");
 
   try {
     const res = await fetch("panchangam.txt");
     if (!res.ok) throw new Error("Could not load panchangam.txt");
     const text = await res.text();
+
+    // Range View: publish EVERYTHING as-is
+    if (rangeTextEl) rangeTextEl.textContent = text;
 
     const lines = text.split(/\r?\n/);
 
@@ -353,58 +398,58 @@ async function main() {
 
     // ----- Tithi -----
     const { current: tithiCur, next: tithiNext } = findCurrentAndNext(tithiIntervals, now);
-    document.getElementById("tithi-current").textContent =
-      tithiCur ? tithiCur.name : "Not in range";
-    document.getElementById("tithi-remaining").textContent =
-      tithiCur ? formatTimeRemaining(tithiCur.end, now) : "";
+    const tCurEl = document.getElementById("tithi-current");
+    const tRemEl = document.getElementById("tithi-remaining");
+    const tNextEl = document.getElementById("tithi-next");
 
-    if (tithiNext) {
-      document.getElementById("tithi-next").textContent =
-        `${tithiNext.name} (starts: ${formatDateTime(tithiNext.start)})`;
-    } else {
-      document.getElementById("tithi-next").textContent = "–";
+    if (tCurEl) tCurEl.textContent = tithiCur ? tithiCur.name : "Not in range";
+    if (tRemEl) tRemEl.textContent = tithiCur ? formatTimeRemaining(tithiCur.end, now) : "";
+    if (tNextEl) {
+      tNextEl.textContent = tithiNext
+        ? `${tithiNext.name} (starts: ${formatDateTime(tithiNext.start)})`
+        : "–";
     }
 
     // ----- Nakshatra (MULTI-LANGUAGE DISPLAY) -----
     const { current: nakCur, next: nakNext } = findCurrentAndNext(nakIntervals, now);
-    document.getElementById("nak-current").textContent =
-      nakCur ? formatNakshatraDisplay(nakCur.name) : "Not in range";
-    document.getElementById("nak-remaining").textContent =
-      nakCur ? formatTimeRemaining(nakCur.end, now) : "";
+    const nCurEl = document.getElementById("nak-current");
+    const nRemEl = document.getElementById("nak-remaining");
+    const nNextEl = document.getElementById("nak-next");
 
-    if (nakNext) {
-      document.getElementById("nak-next").textContent =
-        `${formatNakshatraDisplay(nakNext.name)} (starts: ${formatDateTime(nakNext.start)})`;
-    } else {
-      document.getElementById("nak-next").textContent = "–";
+    if (nCurEl) nCurEl.textContent = nakCur ? formatNakshatraDisplay(nakCur.name) : "Not in range";
+    if (nRemEl) nRemEl.textContent = nakCur ? formatTimeRemaining(nakCur.end, now) : "";
+    if (nNextEl) {
+      nNextEl.textContent = nakNext
+        ? `${formatNakshatraDisplay(nakNext.name)} (starts: ${formatDateTime(nakNext.start)})`
+        : "–";
     }
 
     // ----- Yogam -----
     const { current: yogaCur, next: yogaNext } = findCurrentAndNext(yogaIntervals, now);
-    document.getElementById("yoga-current").textContent =
-      yogaCur ? yogaCur.name : "Not in range";
-    document.getElementById("yoga-remaining").textContent =
-      yogaCur ? formatTimeRemaining(yogaCur.end, now) : "";
+    const yCurEl = document.getElementById("yoga-current");
+    const yRemEl = document.getElementById("yoga-remaining");
+    const yNextEl = document.getElementById("yoga-next");
 
-    if (yogaNext) {
-      document.getElementById("yoga-next").textContent =
-        `${yogaNext.name} (starts: ${formatDateTime(yogaNext.start)})`;
-    } else {
-      document.getElementById("yoga-next").textContent = "–";
+    if (yCurEl) yCurEl.textContent = yogaCur ? yogaCur.name : "Not in range";
+    if (yRemEl) yRemEl.textContent = yogaCur ? formatTimeRemaining(yogaCur.end, now) : "";
+    if (yNextEl) {
+      yNextEl.textContent = yogaNext
+        ? `${yogaNext.name} (starts: ${formatDateTime(yogaNext.start)})`
+        : "–";
     }
 
     // ----- Karanam -----
     const { current: karCur, next: karNext } = findCurrentAndNext(karanaIntervals, now);
-    document.getElementById("karana-current").textContent =
-      karCur ? karCur.name : "Not in range";
-    document.getElementById("karana-remaining").textContent =
-      karCur ? formatTimeRemaining(karCur.end, now) : "";
+    const kCurEl = document.getElementById("karana-current");
+    const kRemEl = document.getElementById("karana-remaining");
+    const kNextEl = document.getElementById("karana-next");
 
-    if (karNext) {
-      document.getElementById("karana-next").textContent =
-        `${karNext.name} (starts: ${formatDateTime(karNext.start)})`;
-    } else {
-      document.getElementById("karana-next").textContent = "–";
+    if (kCurEl) kCurEl.textContent = karCur ? karCur.name : "Not in range";
+    if (kRemEl) kRemEl.textContent = karCur ? formatTimeRemaining(karCur.end, now) : "";
+    if (kNextEl) {
+      kNextEl.textContent = karNext
+        ? `${karNext.name} (starts: ${formatDateTime(karNext.start)})`
+        : "–";
     }
 
     if (statusEl) {
@@ -413,9 +458,12 @@ async function main() {
 
   } catch (err) {
     console.error(err);
-    const statusEl = document.getElementById("status");
     if (statusEl) {
       statusEl.textContent = "Error loading panchangam data. Check console.";
+    }
+    const rangeTextEl2 = document.getElementById("range-text");
+    if (rangeTextEl2) {
+      rangeTextEl2.textContent = "Error loading panchangam.txt. Please check that the file exists in the same folder.";
     }
   }
 }
