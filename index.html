@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    /* =========================
-       Dark background + light cards
-       Smaller/tighter layout + colorful accents
-       ========================= */
-
     :root{
       --bg1:#0b1022;
       --bg2:#0f172a;
@@ -51,7 +46,7 @@
       color: var(--textLight);
     }
 
-    /* ===== Header: compact & glassy ===== */
+    /* ===== Header ===== */
     .header{
       display:flex;
       align-items:center;
@@ -65,7 +60,7 @@
     }
 
     .header img{
-      width: 78px;                 /* smaller for phone */
+      width: 78px;
       height: 78px;
       object-fit: cover;
       border-radius: 14px;
@@ -83,7 +78,7 @@
 
     .header-title h1{
       margin:0;
-      font-size: 1.02rem;          /* reduced */
+      font-size: 1.02rem;
       font-weight: 850;
       letter-spacing: 0.2px;
       color: #f9fafb;
@@ -102,13 +97,36 @@
       text-overflow: ellipsis;
     }
 
-    /* ===== Chips row ===== */
-    .chips{
+    /* Top-right time (smaller) */
+    .header-right{
+      flex: 0 0 auto;
+      display:flex;
+      align-items:flex-start;
+      justify-content:flex-end;
+      margin-left: 6px;
+    }
+
+    #now-display{
+      font-size: 0.74rem;          /* smaller font */
+      font-weight: 750;
+      color: rgba(229,231,235,0.80);
+      padding: 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+      white-space: nowrap;
+      max-width: 360px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ===== Center toggle row ===== */
+    .center-row{
       margin-top: 10px;
       display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
+      justify-content:center;  /* center */
+      align-items:center;
     }
 
     .chip{
@@ -117,17 +135,13 @@
       gap: 6px;
       padding: 7px 10px;
       border-radius: 999px;
-      border: 1px solid var(--panelBorder);
+      border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       box-shadow: 0 8px 16px rgba(0,0,0,0.25);
       font-size: 0.78rem;
       color: var(--textLight);
     }
 
-    #status{ color: var(--mutedLight); }
-    #backend-time{ color: var(--accentPink); font-style: italic; }
-
-    /* ===== View toggle ===== */
     .view-toggle{
       gap: 8px;
       padding: 6px 8px;
@@ -141,7 +155,7 @@
 
     .toggle{
       display:inline-flex;
-      border: 1px solid var(--panelBorder);
+      border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       border-radius: 999px;
       overflow: hidden;
@@ -193,15 +207,13 @@
       border: 1px solid rgba(15,23,42,0.18);
       background: linear-gradient(180deg, var(--card1), var(--card2));
       box-shadow: 0 12px 20px rgba(0,0,0,0.35);
-
-      padding: 10px 10px;        /* tighter */
+      padding: 10px 10px;
       margin-bottom: 10px;
     }
 
-    /* Section title: colorful left stripe + emoji */
     .section h3{
       margin: 0 0 7px 0;
-      font-size: 0.92rem;        /* smaller */
+      font-size: 0.92rem;
       font-weight: 900;
       letter-spacing: 0.25px;
       color: var(--textDark);
@@ -213,7 +225,6 @@
       border-left: 5px solid var(--accentBlue);
     }
 
-    /* Per-box accent override */
     .accent-blue  h3{ border-left-color: var(--accentBlue); }
     .accent-green h3{ border-left-color: var(--accentGreen); }
     .accent-amber h3{ border-left-color: var(--accentAmber); }
@@ -229,7 +240,7 @@
       font-weight: 750;
       color: var(--textDark);
       font-size: 0.90rem;
-      word-break: break-word;     /* important for long multi-language nakshatra */
+      word-break: break-word;
     }
     .time-remaining{
       font-size: 0.82rem;
@@ -242,7 +253,6 @@
       font-size: 0.88rem;
     }
 
-    /* ===== Aparaanha sub-box (inside Sandhyavandanam) ===== */
     .aparahna-subbox{
       margin-top: 8px;
       padding: 8px 9px;
@@ -259,7 +269,6 @@
       margin-right: 6px;
     }
 
-    /* ===== Range view text box ===== */
     .range-pre{
       margin: 0;
       white-space: pre-wrap;
@@ -275,7 +284,6 @@
       background: rgba(255,255,255,0.65);
     }
 
-    /* ===== Revisions ===== */
     .revisions{
       margin-top: 10px;
       border-radius: 12px;
@@ -304,7 +312,6 @@
       color: rgba(229,231,235,0.92);
     }
 
-    /* ===== Footer ===== */
     .footer{
       margin-top: 10px;
       padding: 10px 4px 6px;
@@ -319,13 +326,16 @@
       font-weight: 800;
     }
 
-    /* ===== Mobile ===== */
     @media (max-width: 700px){
       .content{ flex-direction: column; }
       .header img{ width: 70px; height: 70px; }
       .header-title h1{ font-size: 0.98rem; }
       .section{ padding: 9px 9px; }
       .range-pre{ max-height: 60vh; }
+
+      #now-display{
+        max-width: 240px;
+      }
     }
   </style>
 </head>
@@ -335,19 +345,20 @@
   <!-- Header -->
   <div class="header">
     <img src="guru.png" alt="Guru Image" />
+
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
       <div class="subline" id="view-subline">🌙 Chaandramaanam Panchangam • Instantaneous View</div>
     </div>
+
+    <!-- Current time moved to top-right (small) -->
+    <div class="header-right">
+      <div id="now-display">⏱️ Loading time…</div>
+    </div>
   </div>
 
-  <!-- Chips -->
-  <div class="chips">
-    <div id="now-display" class="chip">⏱️ Loading time…</div>
-    <div id="status" class="chip">📄 Loading panchangam…</div>
-    <div id="backend-time" class="chip">🔧 Backend time stamp…</div>
-
-    <!-- View toggle + NEW badge -->
+  <!-- Centered view toggle row -->
+  <div class="center-row">
     <div class="chip view-toggle">
       <div class="toggle-wrap">
         <span style="font-weight:850;">View:</span>
@@ -360,9 +371,9 @@
     </div>
   </div>
 
-  <!-- Instantaneous View (existing UI) -->
+  <!-- Instantaneous View -->
   <div id="instant-view">
-    <!-- Main content -->
+
     <div class="content">
 
       <div class="left-column">
@@ -395,7 +406,6 @@
           <div><span class="label">Next:</span> <span id="karana-next" class="value">–</span></div>
         </div>
 
-        <!-- Vaasaram at the END -->
         <div class="section accent-purple">
           <h3>📅 Vaasaram</h3>
           <div><span class="label">Today:</span> <span id="vasaram-today" class="value">–</span></div>
@@ -420,7 +430,6 @@
           <div class="meta-row"><span class="label">Sunset:</span> <span id="sunset-time" class="value">–</span></div>
           <div class="meta-row"><span class="label">Noon (mid):</span> <span id="noon-time" class="value">–</span></div>
 
-          <!-- 4th item: Aparaanha kaalam (RED BOLD) -->
           <div class="aparahna-subbox">
             <span class="label">Aparaanha kaalam:</span>
             <span id="aparahna-time" class="value">–</span>
@@ -432,7 +441,7 @@
     </div>
   </div>
 
-  <!-- Range View (new) -->
+  <!-- Range View -->
   <div id="range-view" style="display:none; margin-top:10px;">
     <div class="section accent-blue">
       <h3>📅 Range View — Full Panchangam.txt</h3>
