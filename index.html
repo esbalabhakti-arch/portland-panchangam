@@ -245,19 +245,19 @@
       margin-right: 6px;
     }
 
-    /* ===== Current time block (smaller chip) ===== */
+    /* ✅ FIXED: readable time chip on WHITE card */
     .time-chip{
-      font-size: 0.74rem;
-      font-weight: 750;
-      color: rgba(229,231,235,0.92);
-      padding: 7px 10px;
-      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 850;
+      color: var(--textDark);                   /* <-- dark text */
+      padding: 8px 10px;
+      border-radius: 12px;                     /* slightly more card-like */
       border: 1px solid rgba(15,23,42,0.18);
-      background: rgba(15,23,42,0.06);
+      background: rgba(96,165,250,0.10);       /* light blue tint */
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 10px 18px rgba(0,0,0,0.18);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
     }
 
     .range-pre{
@@ -332,7 +332,6 @@
   <!-- Header -->
   <div class="header">
     <img src="guru.png" alt="Guru Image" />
-
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
       <div class="subline" id="view-subline">🌙 Chaandramaanam Panchangam • Instantaneous View</div>
@@ -358,7 +357,6 @@
     <div class="content">
 
       <div class="left-column">
-
         <div class="section accent-green">
           <h3>🟢 Tithi</h3>
           <div><span class="label">Current:</span> <span id="tithi-current" class="value">–</span></div>
@@ -391,11 +389,9 @@
           <h3>📅 Vaasaram</h3>
           <div><span class="label">Today:</span> <span id="vasaram-today" class="value">–</span></div>
         </div>
-
       </div>
 
       <div class="right-column">
-
         <div class="section accent-blue">
           <h3>📘 Samvatsaram & Details</h3>
           <div class="meta-row"><span class="label">Samvatsaram:</span> <span id="samvatsaram" class="value">–</span></div>
@@ -417,12 +413,11 @@
           </div>
         </div>
 
-        <!-- ✅ Current time moved here (below For Sandhyavandanam) -->
+        <!-- Current time block -->
         <div class="section accent-blue">
           <h3>⏱️ Current Time</h3>
           <div id="now-display" class="time-chip">Loading time…</div>
         </div>
-
       </div>
 
     </div>
@@ -438,8 +433,8 @@
 
   <div class="revisions">
     <h3>🧾 Revisions</h3>
-    <pre>Rev5: 02/04/26 - Added "Range View" toggle 
-Rev4: 01/06/26 - Publishing Aparaanha kaalam 
+    <pre>Rev5: 02/04/26 - Added "Range View" toggle to display full panchangam.txt
+Rev4: 01/06/26 - Publishing Aparaanha kaalam for the day (used primarily for shraddha thithi)
 Rev3: 12/24/25 - Nakshatra names multi-lingual
 Rev2: 12/23/25 -  Sunrise / Sunset / noon time added
 Rev1: 12/21/25 - Vasaram section added
