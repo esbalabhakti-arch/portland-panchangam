@@ -127,6 +127,56 @@
     #status{ color: var(--mutedLight); }
     #backend-time{ color: var(--accentPink); font-style: italic; }
 
+    /* ===== View toggle ===== */
+    .view-toggle{
+      gap: 8px;
+      padding: 6px 8px;
+    }
+
+    .toggle-wrap{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+    }
+
+    .toggle{
+      display:inline-flex;
+      border: 1px solid var(--panelBorder);
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    }
+
+    .toggle button{
+      appearance: none;
+      border: 0;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: rgba(229,231,235,0.85);
+      background: transparent;
+      transition: background 160ms ease, color 160ms ease;
+      white-space: nowrap;
+    }
+
+    .toggle button[aria-pressed="true"]{
+      background: rgba(96,165,250,0.20);
+      color: #ffffff;
+    }
+
+    .badge-new{
+      font-size: 0.70rem;
+      font-weight: 900;
+      padding: 3px 7px;
+      border-radius: 999px;
+      color: #0b1022;
+      background: linear-gradient(180deg, #f59e0b, #fb7185);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
     /* ===== Grid ===== */
     .content{
       margin-top: 10px;
@@ -209,6 +259,22 @@
       margin-right: 6px;
     }
 
+    /* ===== Range view text box ===== */
+    .range-pre{
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 0.86rem;
+      line-height: 1.35;
+      color: var(--textDark);
+      max-height: 62vh;
+      overflow: auto;
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 1px solid rgba(15,23,42,0.18);
+      background: rgba(255,255,255,0.65);
+    }
+
     /* ===== Revisions ===== */
     .revisions{
       margin-top: 10px;
@@ -259,6 +325,7 @@
       .header img{ width: 70px; height: 70px; }
       .header-title h1{ font-size: 0.98rem; }
       .section{ padding: 9px 9px; }
+      .range-pre{ max-height: 60vh; }
     }
   </style>
 </head>
@@ -270,7 +337,7 @@
     <img src="guru.png" alt="Guru Image" />
     <div class="header-title">
       <h1>Portland, OR - USA - Pacific Time</h1>
-      <div class="subline">🌙 Chaandramaanam Panchangam • Daily View</div>
+      <div class="subline" id="view-subline">🌙 Chaandramaanam Panchangam • Instantaneous View</div>
     </div>
   </div>
 
@@ -279,80 +346,104 @@
     <div id="now-display" class="chip">⏱️ Loading time…</div>
     <div id="status" class="chip">📄 Loading panchangam…</div>
     <div id="backend-time" class="chip">🔧 Backend time stamp…</div>
+
+    <!-- View toggle + NEW badge -->
+    <div class="chip view-toggle">
+      <div class="toggle-wrap">
+        <span style="font-weight:850;">View:</span>
+        <div class="toggle" role="group" aria-label="View Toggle">
+          <button id="btn-instant" type="button" aria-pressed="true">Instantaneous</button>
+          <button id="btn-range" type="button" aria-pressed="false">Range</button>
+        </div>
+        <span class="badge-new">New</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Main content -->
-  <div class="content">
+  <!-- Instantaneous View (existing UI) -->
+  <div id="instant-view">
+    <!-- Main content -->
+    <div class="content">
 
-    <div class="left-column">
+      <div class="left-column">
 
-      <div class="section accent-green">
-        <h3>🟢 Tithi</h3>
-        <div><span class="label">Current:</span> <span id="tithi-current" class="value">–</span></div>
-        <div class="time-remaining" id="tithi-remaining"></div>
-        <div><span class="label">Next:</span> <span id="tithi-next" class="value">–</span></div>
-      </div>
-
-      <div class="section accent-blue">
-        <h3>🔵 Nakshatra</h3>
-        <div><span class="label">Current:</span> <span id="nak-current" class="value">–</span></div>
-        <div class="time-remaining" id="nak-remaining"></div>
-        <div><span class="label">Next:</span> <span id="nak-next" class="value">–</span></div>
-      </div>
-
-      <div class="section accent-amber">
-        <h3>🟠 Yogam</h3>
-        <div><span class="label">Current:</span> <span id="yoga-current" class="value">–</span></div>
-        <div class="time-remaining" id="yoga-remaining"></div>
-        <div><span class="label">Next:</span> <span id="yoga-next" class="value">–</span></div>
-      </div>
-
-      <div class="section accent-pink">
-        <h3>🟣 Karanam</h3>
-        <div><span class="label">Current:</span> <span id="karana-current" class="value">–</span></div>
-        <div class="time-remaining" id="karana-remaining"></div>
-        <div><span class="label">Next:</span> <span id="karana-next" class="value">–</span></div>
-      </div>
-
-      <!-- Vaasaram at the END -->
-      <div class="section accent-purple">
-        <h3>📅 Vaasaram</h3>
-        <div><span class="label">Today:</span> <span id="vasaram-today" class="value">–</span></div>
-      </div>
-
-    </div>
-
-    <div class="right-column">
-
-      <div class="section accent-blue">
-        <h3>📘 Samvatsaram & Details</h3>
-        <div class="meta-row"><span class="label">Samvatsaram:</span> <span id="samvatsaram" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Ayanam:</span> <span id="ayanam" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Ruthu:</span> <span id="ruthu" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Masam:</span> <span id="masam" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Paksham:</span> <span id="paksham" class="value">–</span></div>
-      </div>
-
-      <div class="section accent-amber">
-        <h3>🌅 For Sandhyavandanam</h3>
-        <div class="meta-row"><span class="label">Sunrise:</span> <span id="sunrise-time" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Sunset:</span> <span id="sunset-time" class="value">–</span></div>
-        <div class="meta-row"><span class="label">Noon (mid):</span> <span id="noon-time" class="value">–</span></div>
-
-        <!-- 4th item: Aparaanha kaalam (RED BOLD) -->
-        <div class="aparahna-subbox">
-          <span class="label">Aparaanha kaalam:</span>
-          <span id="aparahna-time" class="value">–</span>
+        <div class="section accent-green">
+          <h3>🟢 Tithi</h3>
+          <div><span class="label">Current:</span> <span id="tithi-current" class="value">–</span></div>
+          <div class="time-remaining" id="tithi-remaining"></div>
+          <div><span class="label">Next:</span> <span id="tithi-next" class="value">–</span></div>
         </div>
+
+        <div class="section accent-blue">
+          <h3>🔵 Nakshatra</h3>
+          <div><span class="label">Current:</span> <span id="nak-current" class="value">–</span></div>
+          <div class="time-remaining" id="nak-remaining"></div>
+          <div><span class="label">Next:</span> <span id="nak-next" class="value">–</span></div>
+        </div>
+
+        <div class="section accent-amber">
+          <h3>🟠 Yogam</h3>
+          <div><span class="label">Current:</span> <span id="yoga-current" class="value">–</span></div>
+          <div class="time-remaining" id="yoga-remaining"></div>
+          <div><span class="label">Next:</span> <span id="yoga-next" class="value">–</span></div>
+        </div>
+
+        <div class="section accent-pink">
+          <h3>🟣 Karanam</h3>
+          <div><span class="label">Current:</span> <span id="karana-current" class="value">–</span></div>
+          <div class="time-remaining" id="karana-remaining"></div>
+          <div><span class="label">Next:</span> <span id="karana-next" class="value">–</span></div>
+        </div>
+
+        <!-- Vaasaram at the END -->
+        <div class="section accent-purple">
+          <h3>📅 Vaasaram</h3>
+          <div><span class="label">Today:</span> <span id="vasaram-today" class="value">–</span></div>
+        </div>
+
+      </div>
+
+      <div class="right-column">
+
+        <div class="section accent-blue">
+          <h3>📘 Samvatsaram & Details</h3>
+          <div class="meta-row"><span class="label">Samvatsaram:</span> <span id="samvatsaram" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Ayanam:</span> <span id="ayanam" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Ruthu:</span> <span id="ruthu" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Masam:</span> <span id="masam" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Paksham:</span> <span id="paksham" class="value">–</span></div>
+        </div>
+
+        <div class="section accent-amber">
+          <h3>🌅 For Sandhyavandanam</h3>
+          <div class="meta-row"><span class="label">Sunrise:</span> <span id="sunrise-time" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Sunset:</span> <span id="sunset-time" class="value">–</span></div>
+          <div class="meta-row"><span class="label">Noon (mid):</span> <span id="noon-time" class="value">–</span></div>
+
+          <!-- 4th item: Aparaanha kaalam (RED BOLD) -->
+          <div class="aparahna-subbox">
+            <span class="label">Aparaanha kaalam:</span>
+            <span id="aparahna-time" class="value">–</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
+  </div>
 
+  <!-- Range View (new) -->
+  <div id="range-view" style="display:none; margin-top:10px;">
+    <div class="section accent-blue">
+      <h3>📅 Range View — Full Panchangam.txt</h3>
+      <pre id="range-text" class="range-pre">Loading panchangam.txt…</pre>
+    </div>
   </div>
 
   <div class="revisions">
     <h3>🧾 Revisions</h3>
-    <pre>Rev4: 01/06/26 - Publishing Aparaanha kaalam for the day (used primarily for shraddha thithi)
+    <pre>Rev5: 02/04/26 - Added "Range View" toggle to display full panchangam.txt
+Rev4: 01/06/26 - Publishing Aparaanha kaalam for the day (used primarily for shraddha thithi)
 Rev3: 12/24/25 - Nakshatra names multi-lingual
 Rev2: 12/23/25 -  Sunrise / Sunset / noon time added
 Rev1: 12/21/25 - Vasaram section added
