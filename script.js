@@ -195,41 +195,73 @@ function getBackendTimestamp(lines) {
  * 2026/01/06: Tuesday, Bhowma, Sunrise: 07:50:43, Sunset: 16:42:54, Aparaanha kaalam: 13:00:00 to 15:00:00
  */
 function parseVaasaramDetailsMap(sectionLines) {
+
   const map = new Map();
 
-  for (const raw0 of sectionLines) {
-    let raw = raw0 || "";
-    raw = raw.replace(/\u00A0/g, " ").trim();
-    if (!raw) continue;
-    if (raw.startsWith("=")) continue;
+  let currentDate = null;
+  let currentObj = null;
 
-    const m = raw.match(/^(\d{4}\/\d{2}\/\d{2})\s*:\s*(.+)$/);
-    if (!m) continue;
+  for (const rawLine of sectionLines) {
 
-    const ymd = m[1].trim();
-    const rest = m[2].trim();
+    const line = String(rawLine)
+      .replace(/\u00A0/g, " ")
+      .trim();
 
-    // NOTE: Aparaanha kaalam is optional and captured AS IS (no modifications)
-    const re = /^([^,]+)\s*,\s*([^,]+)\s*,\s*Sunrise:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})\s*,\s*Sunset:\s*([0-9]{2}:[0-9]{2}:[0-9]{2})(?:\s*,\s*Aparaanha\s+kaalam:\s*(.+))?\s*$/i;
-    const mm = rest.match(re);
+    if (!line) continue;
+    if (line.startsWith("=")) continue;
 
-    if (!mm) {
-      map.set(ymd, { raw: rest });
+    const dateMatch =
+      line.match(/^(\d{4}\/\d{2}\/\d{2})\s*:\s*([^,]+)\s*,\s*(.+)$/);
+
+    if (dateMatch) {
+
+      currentDate = dateMatch[1];
+
+      currentObj = {
+        weekday: dateMatch[2].trim(),
+        vasaram: dateMatch[3].trim(),
+        sunrise: null,
+        sunset: null,
+        aparahna: null,
+        maadhyaanhika: null
+      };
+
+      map.set(currentDate, currentObj);
       continue;
     }
 
-    map.set(ymd, {
-      weekday: mm[1].trim(),
-      vasaram: mm[2].trim(),
-      sunrise: mm[3].trim(),
-      sunset: mm[4].trim(),
-      aparahna: mm[5] ? String(mm[5]).trim() : null, // <-- time range only, AS IS
-      raw: rest
-    });
+    if (!currentObj) continue;
+
+    let m;
+
+    m = line.match(/^Sunrise:\s*(.+)$/i);
+    if (m) {
+      currentObj.sunrise = m[1].trim();
+      continue;
+    }
+
+    m = line.match(/^Sunset:\s*(.+)$/i);
+    if (m) {
+      currentObj.sunset = m[1].trim();
+      continue;
+    }
+
+    m = line.match(/^Maadhyaanhika\s+kaalam:\s*(.+)$/i);
+    if (m) {
+      currentObj.maadhyaanhika = m[1].trim();
+      continue;
+    }
+
+    m = line.match(/^Aparaanha\s+kaalam:\s*(.+)$/i);
+    if (m) {
+      currentObj.aparahna = m[1].trim();
+      continue;
+    }
   }
 
   return map;
 }
+
 
 // ---- View toggle (Instantaneous vs Range) ----
 
@@ -343,6 +375,7 @@ async function main() {
     const sunsetEl = document.getElementById("sunset-time");
     const noonEl = document.getElementById("noon-time");
     const aparahnaEl = document.getElementById("aparahna-time");
+    const maadhyaanhikaEl = document.getElementById("maadhyaanhika-time");
 
     let vasSection = extractSection(lines, "Vaasaram details");
     if (!vasSection.length) vasSection = extractSection(lines, "Vasaram details");
@@ -367,8 +400,18 @@ async function main() {
       }
 
       // Aparaanha kaalam: publish time range AS IS (do not change)
+      if (maadhyaanhikaEl) {
+        maadhyaanhikaEl.textContent =
+          todayObj.maadhyaanhika
+            ? todayObj.maadhyaanhika
+            : "–";
+      }
+      
       if (aparahnaEl) {
-        aparahnaEl.textContent = todayObj.aparahna ? todayObj.aparahna : "–";
+        aparahnaEl.textContent =
+          todayObj.aparahna
+            ? todayObj.aparahna
+            : "–";
       }
 
       if (todayObj.sunrise && todayObj.sunset) {
