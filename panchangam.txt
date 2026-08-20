@@ -17,6 +17,8 @@ Paksham : Shukla
 Thithi details: 
 =========
 
+Ashtami: 2026/08/19 06:50 to 2026/08/20 08:48
+
 Navami: 2026/08/20 08:48 to 2026/08/21 11:06
 
 Dashami: 2026/08/21 11:06 to 2026/08/22 13:30
@@ -35,6 +37,8 @@ Next Thithi: Prathama
 
 Nakshatram details: 
 ==============
+
+Vishaakha: 2026/08/18 18:14 to 2026/08/19 20:36
 
 Anuradha: 2026/08/19 20:36 to 2026/08/20 23:20
 
@@ -57,6 +61,10 @@ Next Nakshatram: Poorvaproshtapada
 Yogam details: 
 ==========
 
+Braahmaha: 2026/08/18 14:48 to 2026/08/19 15:09
+
+Indraha/Mahendraha: 2026/08/19 15:09 to 2026/08/20 15:51
+
 Vydruthihi: 2026/08/20 15:51 to 2026/08/21 16:44
 
 Vishkambhaha: 2026/08/21 16:44 to 2026/08/22 17:40
@@ -75,6 +83,10 @@ Next Yogam: Sukarma
 
 Karanam details: 
 ============
+
+Vishtihi/Bhadra: 2026/08/19 06:50 to 2026/08/19 19:46
+
+Bavaha: 2026/08/19 19:46 to 2026/08/20 08:48
 
 Baalavaha: 2026/08/20 08:48 to 2026/08/20 21:56
 
