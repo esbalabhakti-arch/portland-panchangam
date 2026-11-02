@@ -1,7 +1,7 @@
 Shri Gurubhyo namaha
 Pacific time Chaandramaanam panchangam 
 
-Date and time created: 2026/09/10 12:36:42
+Date and time created: 2026/11/01 12:36:42
 
 Samvatsaram : Paraabhava
 
@@ -14,151 +14,99 @@ Masam : Aashvayuja
 Paksham : Krishna
 
 
-Thithi details:
+Thithi details: 
 =========
 
-Prathama: 2026/10/25 21:11 to 2026/10/26 18:32
+Navami: 2026/11/01 23:41 to 2026/11/02 22:25
 
-Dwitheeya: 2026/10/26 18:32 to 2026/10/27 15:37
+Dashami: 2026/11/02 22:25 to 2026/11/03 21:33
 
-Trutheeya: 2026/10/27 15:37 to 2026/10/28 12:37
+Ekadashi: 2026/11/03 21:33 to 2026/11/04 21:06
 
-Chathurthi: 2026/10/28 12:37 to 2026/10/29 09:40
+Dwadashi: 2026/11/04 21:06 to 2026/11/05 21:01
 
-Panchami: 2026/10/29 09:40 to 2026/10/30 06:55
+Tryodashi: 2026/11/05 21:01 to 2026/11/06 21:18
 
-Shashti: 2026/10/30 06:55 to 2026/10/31 04:27
+Chathurdashi: 2026/11/06 21:18 to 2026/11/07 21:58
 
-Sapthami: 2026/10/31 04:27 to 2026/11/01 01:22
+Amaavaasya: 2026/11/07 21:58 to 2026/11/08 23:02
 
-Ashtami: 2026/11/01 01:22 to 2026/11/01 23:41
+Next Thithi: Prathama
 
-Next Thithi: Navami
-
-Nakshatram details:
+Nakshatram details: 
 ==============
 
-Apabharani: 2026/10/26 05:09 to 2026/10/27 03:07
+Magha: 2026/11/02 14:14 to 2026/11/03 13:54
 
-Krutthika: 2026/10/27 03:07 to 2026/10/28 00:54
+Poorvaphalguni: 2026/11/03 13:54 to 2026/11/04 13:58
 
-Rohini: 2026/10/28 00:54 to 2026/10/28 22:39
+Uttaraphalguni: 2026/11/04 13:58 to 2026/11/05 14:23
 
-Mrugasheersham: 2026/10/28 22:39 to 2026/10/29 20:32
+Hasta: 2026/11/05 14:23 to 2026/11/06 15:11
 
-Aardra: 2026/10/29 20:32 to 2026/10/30 18:40
+Chitra: 2026/11/06 15:11 to 2026/11/07 16:20
 
-Punarvasu: 2026/10/30 18:40 to 2026/10/31 17:07
+Swaathi: 2026/11/07 16:20 to 2026/11/08 17:51
 
-Pushya: 2026/10/31 17:07 to 2026/11/01 14:58
+Next Nakshatram: Vishaakha
 
-Ashresha: 2026/11/01 14:58 to 2026/11/02 14:14
-
-Next Nakshatram: Magha
-
-Yogam details:
+Yogam details: 
 ==========
 
-Siddhihi: 2026/10/26 01:42 to 2026/10/26 22:19
+Shuklaha: 2026/11/01 22:32 to 2026/11/02 20:19
 
-Vyateepaath: 2026/10/26 22:19 to 2026/10/27 18:44
+Braahmaha: 2026/11/02 20:19 to 2026/11/03 18:26
 
-Vareeyaan: 2026/10/27 18:44 to 2026/10/28 15:06
+Indraha/Mahendraha: 2026/11/03 18:26 to 2026/11/04 16:52
 
-Parighaha: 2026/10/28 15:06 to 2026/10/29 11:32
+Vydruthihi: 2026/11/04 16:52 to 2026/11/05 15:35
 
-Shivaha: 2026/10/29 11:32 to 2026/10/30 08:07
+Vishkambhaha: 2026/11/05 15:35 to 2026/11/06 14:35
 
-Siddhaha: 2026/10/30 08:07 to 2026/10/31 04:57
+Preethihi: 2026/11/06 14:35 to 2026/11/07 13:53
 
-Saadhyaha: 2026/10/31 04:57 to 2026/11/01 01:05
+Aayushmaan: 2026/11/07 13:53 to 2026/11/08 13:28
 
-Shubhaha: 2026/11/01 01:05 to 2026/11/01 22:32
+Sowbhagyaha: 2026/11/08 13:28 to 2026/11/09 13:22
 
-Next Yogam: Shuklaha
+Next Yogam: Shobhanaha
 
-Karanam details:
+Karanam details: 
 ============
 
-Kowlavaha: 2026/10/26 07:54 to 2026/10/26 18:32
+Garaja: 2026/11/02 10:59 to 2026/11/02 22:25
 
-Taithilaha: 2026/10/26 18:32 to 2026/10/27 05:06
+Vanijaha: 2026/11/02 22:25 to 2026/11/03 09:56
 
-Garaja: 2026/10/27 05:06 to 2026/10/27 15:37
+Vishtihi/Bhadra: 2026/11/03 09:56 to 2026/11/03 21:33
 
-Vanijaha: 2026/10/27 15:37 to 2026/10/28 02:07
+Bavaha: 2026/11/03 21:33 to 2026/11/04 09:17
 
-Vishtihi/Bhadra: 2026/10/28 02:07 to 2026/10/28 12:37
+Baalavaha: 2026/11/04 09:17 to 2026/11/04 21:06
 
-Bavaha: 2026/10/28 12:37 to 2026/10/28 23:07
+Kowlavaha: 2026/11/04 21:06 to 2026/11/05 09:00
 
-Baalavaha: 2026/10/28 23:07 to 2026/10/29 09:40
+Taithilaha: 2026/11/05 09:00 to 2026/11/05 21:01
 
-Kowlavaha: 2026/10/29 09:40 to 2026/10/29 20:16
+Garaja: 2026/11/05 21:01 to 2026/11/06 09:06
 
-Taithilaha: 2026/10/29 20:16 to 2026/10/30 06:55
+Vanijaha: 2026/11/06 09:06 to 2026/11/06 21:18
 
-Garaja: 2026/10/30 06:55 to 2026/10/30 17:39
+Vishtihi/Bhadra: 2026/11/06 21:18 to 2026/11/07 09:35
 
-Vanijaha: 2026/10/30 17:39 to 2026/10/31 04:27
+Shakuni: 2026/11/07 09:35 to 2026/11/07 21:58
 
-Vishtihi/Bhadra: 2026/10/31 04:27 to 2026/10/31 15:22
+Chathushpaath: 2026/11/07 21:58 to 2026/11/08 10:27
 
-Bavaha: 2026/10/31 15:22 to 2026/11/01 01:22
+Naaga: 2026/11/08 10:27 to 2026/11/08 23:02
 
-Baalavaha: 2026/11/01 01:22 to 2026/11/01 12:28
+Kimstughna: 2026/11/08 23:02 to 2026/11/09 11:43
 
-Kowlavaha: 2026/11/01 12:28 to 2026/11/01 23:41
-
-Taithilaha: 2026/11/01 23:41 to 2026/11/02 10:59
-
-Next Karanam: Garaja
+Next Karanam: Bavaha
 
 Vaasaram details:
 =============
 
-2026/10/25: Sunday, Bhanu
-Sunrise:  07:41:02
-Maadhyaanhika kaalam: 11:51:42 to 13:57:02
-Aparaanha kaalam: 13:57:02 to 16:02:22
-Sunset: 18:07:43
- 
-2026/10/26: Monday, Indu
-Sunrise:  07:42:25
-Maadhyaanhika kaalam: 11:51:54 to 13:56:38
-Aparaanha kaalam: 13:56:38 to 16:01:23
-Sunset: 18:06:08
- 
-2026/10/27: Tuesday, Bhowma
-Sunrise:  07:43:48
-Maadhyaanhika kaalam: 11:52:06 to 13:56:15
-Aparaanha kaalam: 13:56:15 to 16:00:24
-Sunset: 18:04:34
- 
-2026/10/28: Wednesday, Sowmya
-Sunrise:  07:45:11
-Maadhyaanhika kaalam: 11:52:19 to 13:55:53
-Aparaanha kaalam: 13:55:53 to 15:59:27
-Sunset: 18:03:02
- 
-2026/10/29: Thursday, Guru
-Sunrise:  07:46:34
-Maadhyaanhika kaalam: 11:52:32 to 13:55:32
-Aparaanha kaalam: 13:55:32 to 15:58:31
-Sunset: 18:01:31
- 
-2026/10/30: Friday, Bhrugu
-Sunrise:  07:47:58
-Maadhyaanhika kaalam: 11:52:47 to 13:55:11
-Aparaanha kaalam: 13:55:11 to 15:57:36
-Sunset: 18:00:01
- 
-2026/10/31: Saturday, Sthira
-Sunrise:  07:49:21
-Maadhyaanhika kaalam: 11:53:01 to 13:54:52
-Aparaanha kaalam: 13:54:52 to 15:56:42
-Sunset: 17:58:33
- 
 2026/11/01: Sunday, Bhanu
 Sunrise:  06:50:45
 Maadhyaanhika kaalam: 10:53:17 to 12:54:33
@@ -170,6 +118,48 @@ Sunrise:  06:52:09
 Maadhyaanhika kaalam: 10:53:33 to 12:54:16
 Aparaanha kaalam: 12:54:16 to 14:54:58
 Sunset: 16:55:41
+ 
+2026/11/03: Tuesday, Bhowma
+Sunrise:  06:53:33
+Maadhyaanhika kaalam: 10:53:50 to 12:53:59
+Aparaanha kaalam: 12:53:59 to 14:54:08
+Sunset: 16:54:17
+ 
+2026/11/04: Wednesday, Sowmya
+Sunrise:  06:54:58
+Maadhyaanhika kaalam: 10:54:08 to 12:53:44
+Aparaanha kaalam: 12:53:44 to 14:53:19
+Sunset: 16:52:55
+ 
+2026/11/05: Thursday, Guru
+Sunrise:  06:56:22
+Maadhyaanhika kaalam: 10:54:27 to 12:53:29
+Aparaanha kaalam: 12:53:29 to 14:52:32
+Sunset: 16:51:35
+ 
+2026/11/06: Friday, Bhrugu
+Sunrise:  06:57:46
+Maadhyaanhika kaalam: 10:54:46 to 12:53:16
+Aparaanha kaalam: 12:53:16 to 14:51:46
+Sunset: 16:50:16
+ 
+2026/11/07: Saturday, Sthira
+Sunrise:  06:59:10
+Maadhyaanhika kaalam: 10:55:05 to 12:53:03
+Aparaanha kaalam: 12:53:03 to 14:51:01
+Sunset: 16:48:59
+ 
+2026/11/08: Sunday, Bhanu
+Sunrise:  07:00:35
+Maadhyaanhika kaalam: 10:55:26 to 12:52:52
+Aparaanha kaalam: 12:52:52 to 14:50:18
+Sunset: 16:47:44
+ 
+2026/11/09: Monday, Indu
+Sunrise:  07:01:59
+Maadhyaanhika kaalam: 10:55:47 to 12:52:41
+Aparaanha kaalam: 12:52:41 to 14:49:35
+Sunset: 16:46:30
  
 
 Shubham
