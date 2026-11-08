@@ -2,10 +2,10 @@ Shri Gurubhyo Namaah
 Pacific time Chaandramaana Panchangam
 Date and time created: 2026/11/06 07:34
 Samvatsaram: Paraabhava
-Ayanam Dakshinaayanam
-Ruthu Sharad
-Maasam Kaarthik
-Paksham Shukla
+Ayanam: Dakshinaayanam
+Ruthu: Sharad
+Maasam: Kaarthik
+Paksham: Shukla
 
 Thithi details
 ================
